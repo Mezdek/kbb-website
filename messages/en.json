@@ -93,6 +93,7 @@
       "hijri": "Hijri"
     },
     "table": {
+      "caption": "Prayer times for {month}",
       "weekday": "Day",
       "date": "Date",
       "hijriDate": "Hijri date",

@@ -93,6 +93,7 @@
       "hijri": "Hidschri"
     },
     "table": {
+      "caption": "Gebetszeiten für {month}",
       "weekday": "Tag",
       "date": "Datum",
       "hijriDate": "Hidschri-Datum",

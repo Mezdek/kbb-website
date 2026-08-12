@@ -34,7 +34,7 @@ export async function Header({ active, locale }: { active?: NavKey; locale: stri
             alt="Kulturbrücke Brandenburg"
             width={128}
             height={128}
-            className="h-16 w-16 shrink-0"
+            className="h-10 w-10 md:h-16 md:w-16 shrink-0"
             priority
           />
           <span
