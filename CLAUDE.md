@@ -44,8 +44,11 @@ Do not add dependencies that are not already listed without asking first.
 3. **RTL is a first-class layout, not a mirror.** Use logical properties
    everywhere: `ps-*`, `pe-*`, `ms-*`, `me-*`, `border-s-*`, `text-start`,
    `text-end`. Never `pl-*`, `pr-*`, `ml-*`, `mr-*`, `text-left`, `text-right`.
-4. **Palette is fixed.** Only the eleven values below. No tints, no opacity
-   variants invented to fill a gap, no colours from the design tool's defaults.
+4. **Palette is fixed.** Only the eleven hex values below, defined once in
+   `globals.css`. Never write a hex in a component and never take a colour
+   from the design tool's defaults. Tailwind opacity modifiers of these
+   eleven (`border-secondary/30`, `bg-secondary/13`) are the sanctioned way
+   to make a hairline or a tint — do not invent a new hex for one.
 5. **Everything localizable is localized.** Missing keys fall back to English,
    per key.
 6. **Never invent content.** Addresses, bank details, names, dates, contact
@@ -62,7 +65,7 @@ Do not add dependencies that are not already listed without asking first.
 
 **Every type describing data on disk is generated from its JSON Schema.**
 
-```
+```shell
 schemas/site-config.schema.json      ->  src/types/site-config.schema.d.ts
 schemas/announcement.schema.json     ->  src/types/announcement.schema.d.ts
 schemas/prayer-times.schema.json     ->  src/types/prayer-times.schema.d.ts
@@ -104,7 +107,7 @@ localePrefix: "always"
 **URLs stay German in every locale.** Only the prefix changes. Do not configure
 localized pathnames.
 
-```
+```shell
 /de/moschee/gebetszeiten
 /ar/moschee/gebetszeiten
 /en/moschee/gebetszeiten
@@ -131,7 +134,7 @@ breaks.
 
 ## Routes
 
-```
+```shell
 /                                homepage
 /moschee                         mosque hub — the "Moschee" nav item
 /moschee/gebetszeiten            prayer times
@@ -187,7 +190,7 @@ component structure. Three things they do not carry:
 Defined once in `globals.css` under `@theme`. Never hardcode a hex in a
 component.
 
-**Typography**
+**Typography:**
 
 - Amiri for Arabic, Ubuntu Sans for Latin, both via `next/font/google`
 - Amiri renders optically smaller — the Arabic tree needs roughly `1.08em` and
@@ -246,7 +249,7 @@ schema is a contract between two codebases — do not edit it here.
 
 **This site only reads.** Resolution:
 
-```
+```shell
 {config.prayerTimes.basePath}/{currentYear}/times.json
 ```
 
@@ -276,8 +279,9 @@ calculation in this repository, for any reason.**
 
 ## Content
 
-All content is hand-authored JSON committed to this repo. One author. No admin
-interface, no CMS.
+All content is hand-authored and committed to this repo — JSON for structured
+records, Markdown for long-form documents. One author. No admin interface, no
+CMS.
 
 ### Announcements
 
@@ -333,6 +337,14 @@ duplicate slugs and inconsistent dates must fail the build, not render blank.
 **`/moschee`** — the mosque hub. Shows `org.mosqueName` and links onward to
 `/moschee/gebetszeiten`, `/moschee/hausordnung` and `/moschee/freitagsgebet`.
 
+**`/moschee/hausordnung`** — the house rules. Reached by a QR code inside the
+building, so its readers are largely not browsing the site in their own
+language. The document is offered in **seven** languages independent of the
+three site locales (`de ar en fa tr ru id`), one Markdown file per language,
+selected through `?sprache=`. The document carries its own `lang` and `dir`,
+independent of the page locale. Its picker is a separate, labelled control —
+not the navbar language switcher.
+
 **`/moschee/gebetszeiten`** — the prayer times table.
 
 - The Friday prayer time (`config.fridayPrayer.khutbahTime`) appears in the
@@ -340,12 +352,29 @@ duplicate slugs and inconsistent dates must fail the build, not render blank.
 - **One print button, no download button.** Print resolves to the browser's own
   dialog, which offers "save as PDF". There is no second control and no
   server-side PDF generation.
-- **Fridays** are marked with a thicker border on one side of the row. Use a
-  logical property (`border-inline-start`), never a physical one.
-- **Ayyam al-Bid — Hijri day 13, 14 and 15** — are marked with a different
-  background shade. Read `hijri.day` from the row's own data; never compute it.
-- The two markings are visually distinct and a row that is both shows both.
-  Neither may rely on colour alone to be legible.
+
+*Three row markings, each carried by a different CSS property so they compose
+on a row that is more than one of them and none can mask another:*
+
+| Marking | Carried by |
+| --- | --- |
+| today | background colour |
+| Friday | thick border on the start side |
+| Ayyam al-Bid — Hijri day 13, 14, 15 | border on all four sides |
+
+A Friday inside Ayyam al-Bid therefore shows a thick start side and three
+ordinary ones. The distinction rests on width, not hue, so it survives
+greyscale printing and red-green colour deficiency.
+
+Read `hijri.day` from the row's own data; never compute it. Use logical
+properties (`border-inline-start`), never physical ones.
+
+Border colours must invert on today's dark background: a dark border measures
+about 1.4:1 there and is invisible, a light one about 9.5:1. On the light rows
+the reverse holds. Every colour pairing in this table has been contrast-checked
+— re-check before changing one, and note that the palette has only about three
+distinct luminance levels, so two dark colours will not distinguish two
+markings.
 
 *Columns:* weekday, Gregorian date, Hijri date, then the six prayers.
 
@@ -356,8 +385,19 @@ duplicate slugs and inconsistent dates must fail the build, not render blank.
 | Gregorian | one Gregorian month | where a Hijri month begins |
 | Hijri | one Hijri month | where a Gregorian month begins |
 
-Separator rows are **desktop only**. A Hijri month can span two Gregorian year
-files, and the loader reads one year at a time — that view may need both.
+Separator rows are **desktop only**.
+
+A Hijri month can span two Gregorian year files and the loader reads one year
+at a time, so the Hijri view may need both:
+
+- **Both present** — read from both, render the complete Hijri month.
+- **The adjoining file absent** — render the days that exist and state at the
+  cut that the rest has not been uploaded. The gap can fall at either end.
+
+**This is the one place partial data is allowed**, and it does not weaken the
+rule elsewhere: never interpolate, never compute, never present another year's
+times as if they were this year's. A month with no data at all is still the
+"not uploaded" state, not a partial view.
 
 *Mobile is a single day per page*, each prayer on its own row, with the
 weekday, Gregorian date and Hijri date in the day header. No separator rows.
@@ -422,7 +462,7 @@ If something is not worth testing, say so rather than padding the suite.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
-# This is NOT the Next.js you know
+## This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
