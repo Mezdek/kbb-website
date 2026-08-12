@@ -1,42 +1,58 @@
 import fs from "node:fs";
 import path from "node:path";
 import { isRtlLanguage } from "@/lib/localized";
-import { HAUSORDNUNG_LANGUAGES, type HausordnungLanguage } from "./hausordnungLanguages";
 
-export interface AvailableHausordnungLanguage extends HausordnungLanguage {
+export interface HausordnungDocument {
+  code: string;
   dir: "ltr" | "rtl";
 }
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "hausordnung");
 
 /**
- * Only the languages that actually have a Markdown file on disk, so the
- * picker can never offer a language that would render empty (CLAUDE.md:
- * /moschee/hausordnung — "the loader ... offers only the languages that
- * actually have a file"). `languages` defaults to the full canonical set
- * and is injectable so tests can exercise the absent-file case without
- * touching real content.
+ * Every `<code>.md` in the content directory, read once at module load.
+ * Adding a language is dropping in a file — no registry to update, and the
+ * picker can never offer a language that would render empty.
+ *
+ * Read eagerly rather than per request: a `readFileSync` on a path built
+ * from a variable defeats static analysis, which then traces the whole
+ * project into the deployment output.
  */
-export function getAvailableHausordnungLanguages(
-  languages: readonly HausordnungLanguage[] = HAUSORDNUNG_LANGUAGES,
-): AvailableHausordnungLanguage[] {
-  return languages
-    .filter((language) => fs.existsSync(path.join(CONTENT_DIR, `${language.code}.md`)))
-    .map((language) => ({ ...language, dir: isRtlLanguage(language.code) ? "rtl" : "ltr" }));
-}
+const DOCUMENTS: ReadonlyMap<string, string> = new Map(
+  fs
+    .readdirSync(CONTENT_DIR)
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => [
+      path.basename(file, ".md"),
+      fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8"),
+    ]),
+);
 
 /**
- * `?sprache=` validation (CLAUDE.md: /moschee/hausordnung). An unknown or
- * absent value resolves to `undefined`, which the page treats identically —
- * the language chooser, not the document.
+ * Languages on offer, by file name. Display names are not resolved here —
+ * the page looks each code up in `common.localeNames` and falls back to the
+ * bare code, so `ckb.md` appears as "ckb" rather than not at all.
  */
-export function resolveHausordnungLanguage(
-  requested: string | undefined,
-  available: readonly { code: string }[],
-): string | undefined {
-  return available.some((language) => language.code === requested) ? requested : undefined;
+export const HAUSORDNUNG_DOCUMENTS: readonly HausordnungDocument[] = [...DOCUMENTS.keys()]
+  .sort()
+  .map((code) => ({
+    code,
+    dir: isRtlLanguage(code) ? ("rtl" as const) : ("ltr" as const),
+  }));
+
+/**
+ * `?sprache=` validation. An unknown or absent value resolves to
+ * `undefined`, which the page treats identically — the chooser, not the
+ * document.
+ */
+export function resolveHausordnungLanguage(requested: string | undefined): string | undefined {
+  return requested && DOCUMENTS.has(requested) ? requested : undefined;
 }
 
 export function readHausordnungDocument(code: string): string {
-  return fs.readFileSync(path.join(CONTENT_DIR, `${code}.md`), "utf-8");
+  const document = DOCUMENTS.get(code);
+  if (!document) {
+    throw new Error(`No Hausordnung document for language "${code}"`);
+  }
+  return document;
 }

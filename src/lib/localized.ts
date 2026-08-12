@@ -3,7 +3,7 @@ import { fallbackLocale } from "@/i18n/routing";
 // Languages this site's content is known to render right-to-left. Localized
 // values are not restricted to the three UI locales, so this covers the
 // language-key case generally rather than special-casing "ar".
-const RTL_LANGUAGES = new Set(["ar", "he", "fa", "ur", "ps", "sd", "yi"]);
+const RTL_LANGUAGES = new Set(["ar", "he", "fa", "ur", "ps", "sd", "yi", "ckb"]);
 
 export interface ResolvedLocalized {
   text: string;

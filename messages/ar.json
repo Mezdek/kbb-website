@@ -3,7 +3,12 @@
     "localeNames": {
       "de": "Deutsch",
       "ar": "العربية",
-      "en": "English"
+      "en": "English",
+      "fa": "فارسی",
+      "tr": "Türkçe",
+      "ru": "Русский",
+      "id": "Bahasa Indonesia",
+      "ckb": "کوردی"
     },
     "underConstruction": "هذه الصفحة قيد الإنشاء. يُرجى المراجعة لاحقًا."
   },
@@ -48,7 +53,7 @@
   },
   "hausordnung": {
     "pickerLabel": "لغة الوثيقة",
-    "pickerInstruction": "اختر لغة النظام الداخلي.",
+    "pickerInstruction": "اختر لغة قواعد استخدام المسجد.",
     "print": "طباعة"
   },
   "home": {

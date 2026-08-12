@@ -3,7 +3,12 @@
     "localeNames": {
       "de": "Deutsch",
       "ar": "العربية",
-      "en": "English"
+      "en": "English",
+      "fa": "فارسی",
+      "tr": "Türkçe",
+      "ru": "Русский",
+      "id": "Bahasa Indonesia",
+      "ckb": "کوردی"
     },
     "underConstruction": "This page is under construction. Please check back soon."
   },
