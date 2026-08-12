@@ -1,10 +1,10 @@
-import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { StarMark } from "./icons/StarMark";
-import { LanguageSwitcher } from "./LanguageSwitcher";
-import { MobileNav } from "./MobileNav";
 import { getSiteConfig } from "@/lib/config";
 import { resolveLocalized } from "@/lib/localized";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { MobileNav } from "./MobileNav";
 
 type NavKey = "moschee" | "aktuelles" | "spenden" | "verein" | "kontakt";
 
@@ -24,13 +24,24 @@ export async function Header({ active, locale }: { active?: NavKey; locale: stri
 
   return (
     <header className="bg-primary text-secondary-shade-2">
-      <div className="flex items-center justify-between gap-4 px-4 py-3.5 md:px-12 md:py-[22px]">
+      <div className="flex items-center justify-between gap-4 px-4 py-3 md:px-12">
         <Link
           href="/"
           className="flex items-center gap-2.5 text-secondary-shade-2 no-underline md:gap-3.5"
         >
-          <StarMark className="h-6 w-6 shrink-0 text-secondary md:h-[30px] md:w-[30px]" />
-          <span lang={orgName.lang} dir={orgName.dir} className="text-sm font-medium md:text-[17px]">
+          <Image
+            src="/kbb-logo-colorful-square-cropped.png"
+            alt="Kulturbrücke Brandenburg"
+            width={128}
+            height={128}
+            className="h-16 w-16 shrink-0"
+            priority
+          />
+          <span
+            lang={orgName.lang}
+            dir={orgName.dir}
+            className="text-sm font-medium md:text-[17px]"
+          >
             {orgName.text}
           </span>
         </Link>
@@ -40,7 +51,7 @@ export async function Header({ active, locale }: { active?: NavKey; locale: stri
             <Link
               key={item.key}
               href={item.href}
-              className={`pb-[3px] text-secondary-shade-2 no-underline ${
+              className={`pb-0.75 text-secondary-shade-2 no-underline ${
                 item.key === active ? "border-b-2 border-secondary" : ""
               }`}
             >
