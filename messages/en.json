@@ -46,6 +46,11 @@
       "freitagsgebet": "Friday prayer"
     }
   },
+  "hausordnung": {
+    "pickerLabel": "Document language",
+    "pickerInstruction": "Choose the language of the house rules.",
+    "print": "Print"
+  },
   "home": {
     "heroTitle": "A place for prayer, education and neighbourhood in Brandenburg an der Havel.",
     "paragraph1": "{orgName} is a registered non-profit association. We run the {mosqueName}, organise lessons for children and adults, and are a point of contact for neighbours, schools and the city.",

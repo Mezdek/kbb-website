@@ -4,14 +4,16 @@ import type { ReactNode } from "react";
 const disabledTag = () => null;
 
 /**
- * Renders announcement body Markdown to a limited, sanitized subset
- * (CLAUDE.md: Content — "Body may contain Markdown. Render a limited
- * subset. Sanitize."). `compiler()` never uses `dangerouslySetInnerHTML`;
- * raw HTML in the source is disabled outright (escaped as text) rather than
- * parsed, and structural tags outside the intended subset (headings,
- * images, tables) are demoted or dropped rather than rendered verbatim.
+ * Renders Markdown to a limited, sanitized subset — shared by announcement
+ * bodies (CLAUDE.md: Content — "Body may contain Markdown. Render a limited
+ * subset. Sanitize.") and the `/moschee/hausordnung` document, rather than
+ * configuring a second renderer. `compiler()` never uses
+ * `dangerouslySetInnerHTML`; raw HTML in the source is disabled outright
+ * (escaped as text) rather than parsed, and structural tags outside the
+ * intended subset (headings, images, tables) are demoted or dropped rather
+ * than rendered verbatim.
  */
-export function renderAnnouncementBody(markdown: string): ReactNode {
+export function renderMarkdown(markdown: string): ReactNode {
   return compiler(markdown, {
     disableParsingRawHTML: true,
     overrides: {

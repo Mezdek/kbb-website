@@ -46,6 +46,11 @@
       "freitagsgebet": "Freitagsgebet"
     }
   },
+  "hausordnung": {
+    "pickerLabel": "Sprache des Dokuments",
+    "pickerInstruction": "Wählen Sie die Sprache der Hausordnung.",
+    "print": "Drucken"
+  },
   "home": {
     "heroTitle": "Ein Ort für Gebet, Bildung und Nachbarschaft in Brandenburg an der Havel.",
     "paragraph1": "Die {orgName} ist ein eingetragener gemeinnütziger Verein. Wir tragen die {mosqueName}, organisieren Unterricht für Kinder und Erwachsene und stehen als Ansprechpartner für Nachbarschaft, Schulen und Stadt zur Verfügung.",

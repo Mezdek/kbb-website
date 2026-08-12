@@ -12,6 +12,16 @@ export interface ResolvedLocalized {
 }
 
 /**
+ * Whether a language code is known to be written right-to-left. The single
+ * source of truth for this fact (CLAUDE.md absolute rule 7) — shared by
+ * `resolveLocalized` below and by the `/moschee/hausordnung` document
+ * language loader, which is not restricted to the three UI locales either.
+ */
+export function isRtlLanguage(lang: string): boolean {
+  return RTL_LANGUAGES.has(lang);
+}
+
+/**
  * Resolves any `{[languageCode]: string}`-shaped value — announcement
  * `title`/`body`, `config/site.json`'s `org.localizedName`/`org.mosqueName`
  * — against the active locale, then the fallback locale, then any
@@ -26,5 +36,5 @@ export function resolveLocalized(value: Record<string, string>, locale: string):
   if (!lang) {
     throw new Error("Localized value has no entries");
   }
-  return { text: value[lang]!, lang, dir: RTL_LANGUAGES.has(lang) ? "rtl" : "ltr" };
+  return { text: value[lang]!, lang, dir: isRtlLanguage(lang) ? "rtl" : "ltr" };
 }
