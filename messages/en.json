@@ -1,0 +1,187 @@
+{
+  "common": {
+    "localeNames": {
+      "de": "Deutsch",
+      "ar": "العربية",
+      "en": "English"
+    },
+    "underConstruction": "This page is under construction. Please check back soon."
+  },
+  "nav": {
+    "moschee": "Mosque",
+    "aktuelles": "News",
+    "spenden": "Donate",
+    "verein": "Association",
+    "kontakt": "Contact"
+  },
+  "footer": {
+    "columns": {
+      "moschee": {
+        "heading": "Mosque",
+        "gebetszeiten": "Prayer times",
+        "freitagsgebet": "Friday prayer",
+        "hausordnung": "House rules"
+      },
+      "verein": {
+        "heading": "Association",
+        "ueberUns": "About us",
+        "vorstand": "Board",
+        "mitgliedWerden": "Become a member",
+        "dokumente": "Documents"
+      },
+      "legal": {
+        "heading": "Legal",
+        "impressum": "Legal notice",
+        "datenschutz": "Privacy policy"
+      }
+    },
+    "registryLine": "Register of Associations {number} · {court}"
+  },
+  "moschee": {
+    "eyebrow": "Mosque",
+    "intro": "Prayer times, house rules and the Friday sermon.",
+    "links": {
+      "gebetszeiten": "Prayer times",
+      "hausordnung": "House Rules",
+      "freitagsgebet": "Friday prayer"
+    }
+  },
+  "home": {
+    "heroTitle": "A place for prayer, education and neighbourhood in Brandenburg an der Havel.",
+    "paragraph1": "{orgName} is a registered non-profit association. We run the {mosqueName}, organise lessons for children and adults, and are a point of contact for neighbours, schools and the city.",
+    "paragraph2": "Visitors are welcome. A short heads-up beforehand is enough.",
+    "ctaAbout": "About the association",
+    "ctaVisit": "Request a visit",
+    "aktuelles": {
+      "heading": "News",
+      "all": "All announcements"
+    },
+    "aside": {
+      "fridayHeading": "Friday prayer",
+      "fridayNote": "Khutbah in Arabic, summary in German.",
+      "addressHeading": "Address",
+      "directionsLink": "Directions and public transport",
+      "donateHeading": "Donate",
+      "donateBlurb": "Zakat, Sadaqa and project donations by bank transfer.",
+      "donateCta": "Go to donations"
+    }
+  },
+  "prayerBand": {
+    "todayLabel": "Prayer times today",
+    "nextPrayer": "Next prayer",
+    "nextPrayerIn": "{name} in {duration}",
+    "viewMonthTable": "View monthly table",
+    "names": {
+      "fajr": "Fajr",
+      "shuruq": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "noTimesUploaded": "No prayer times have been uploaded for this period yet. Please check back soon."
+  },
+  "prayerTimes": {
+    "eyebrow": "Mosque · Prayer times",
+    "title": "Prayer times {month} {year}",
+    "methodNote": "Calculated for Brandenburg an der Havel. Iqama is {offset} minutes after Adhan, {fajrOffset} minutes for Fajr.",
+    "fridayKhutbah": "Friday khutbah {time}",
+    "todayCallout": "Today · {date}",
+    "nextPrayerLabel": "Next prayer: {name} {time}",
+    "view": {
+      "gregorian": "Gregorian",
+      "hijri": "Hijri"
+    },
+    "table": {
+      "weekday": "Day",
+      "date": "Date",
+      "hijriDate": "Hijri date",
+      "fajr": "Fajr",
+      "shuruq": "Sunrise",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha",
+      "today": "Today",
+      "note": "All times CEST. Changes are announced here and on the noticeboard.",
+      "printA4": "Print table (A4)",
+      "switchMonth": "Change month",
+      "hijriMonthBegins": "{month} begins",
+      "gregorianMonthBegins": "{month} begins",
+      "missingStart": "Earlier times for this month have not been uploaded yet.",
+      "missingEnd": "Later times for this month have not been uploaded yet."
+    },
+    "mobile": {
+      "previousDay": "Previous day",
+      "nextDay": "Next day"
+    }
+  },
+  "announcements": {
+    "eyebrow": "News",
+    "title": "Announcements",
+    "intro": "Dates, notices and messages from the association. Pinned announcements stay at the top for as long as they apply.",
+    "filterAll": "All",
+    "pinnedBadge": "Pinned",
+    "paginationLabel": "{shown} of {total} announcements",
+    "older": "Older",
+    "newer": "Newer"
+  },
+  "categories": {
+    "ramadan": "Ramadan",
+    "eid": "Eid",
+    "verein": "Association",
+    "unterricht": "Lessons"
+  },
+  "donations": {
+    "title": "Bank transfer to the association",
+    "intro": "We accept bank transfers only, with no payment provider. Choose the purpose first — it determines what you enter as the payment reference.",
+    "step1Heading": "Step 1 · Choose a purpose",
+    "step2Heading": "Step 2 · Transfer",
+    "recipient": "Recipient",
+    "iban": "IBAN",
+    "bic": "BIC",
+    "bank": "Bank",
+    "verwendungszweckLabel": "Payment reference — please enter exactly as shown",
+    "giroCodeInstruction": "Scan with your banking app — amount and reference are already filled in.",
+    "selectedLabel": "selected",
+    "legalNotice": "The association is recognised as non-profit ({taxOffice}, tax number {taxNumber}). Donation receipts are issued by 31 January of the following year — please include your name in the payment reference, or write to {email}. (Placeholder text pending professional review of the tax wording.)",
+    "purposes": {
+      "zakat": {
+        "name": "Zakat",
+        "description": "Obligatory almsgiving, managed separately and passed on only to those entitled to it."
+      },
+      "zakatAlFitr": {
+        "name": "Zakat al-Fitr",
+        "description": "Before the Eid prayer, per person. The amount is announced each year."
+      },
+      "sadaqa": {
+        "name": "Sadaqa",
+        "description": "Voluntary donation for the mosque's day-to-day operation."
+      },
+      "projekte": {
+        "name": "Projects",
+        "description": "Lessons, youth work and neighbourhood events."
+      },
+      "moscheekauf": {
+        "name": "Mosque purchase",
+        "description": "Purchase of the property. Progress is reported yearly at the general meeting."
+      }
+    }
+  },
+  "hijri": {
+    "months": {
+      "muharram": "Muharram",
+      "safar": "Safar",
+      "rabi-al-awwal": "Rabi al-Awwal",
+      "rabi-al-thani": "Rabi al-Thani",
+      "jumada-al-awwal": "Jumada al-Awwal",
+      "jumada-al-thani": "Jumada al-Thani",
+      "rajab": "Rajab",
+      "shaban": "Sha'ban",
+      "ramadan": "Ramadan",
+      "shawwal": "Shawwal",
+      "dhu-al-qadah": "Dhu al-Qa'dah",
+      "dhu-al-hijjah": "Dhu al-Hijjah"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* Kulturbrücke Brandenburg — fixed palette (CLAUDE.md: Design).
+     These eleven values are the complete set. Never add a hex outside this
+     block; reuse these at Tailwind opacity modifiers (e.g. border-secondary/45)
+     for hairlines/tints instead of inventing new tints. */
+  --color-primary: #002623;
+  --color-primary-shade-1: #054239;
+  --color-primary-shade-2: #428177;
+  --color-secondary: #988561;
+  --color-secondary-shade-1: #b9a779;
+  --color-secondary-shade-2: #edebe0;
+  --color-flair: #260f14;
+  --color-flair-shade-1: #4a151e;
+  --color-flair-shade-2: #6b1f2a;
+  --color-text-body: #161616;
+  --color-text-secondary: #3d3a3b;
+
+  --font-latin: var(--font-ubuntu-sans), system-ui, sans-serif;
+  --font-arabic: var(--font-amiri), serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--color-secondary-shade-1);
+  color: var(--color-text-body);
+  font-family: var(--font-latin);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Amiri renders optically smaller than Ubuntu Sans at the same declared size —
+   bump size and loosen line-height so the Arabic tree sits level with the
+   German (CLAUDE.md: Design > Typography). Keyed off `dir`, set once here, so
+   no component branches on locale to pick a font. */
+html[dir="rtl"] body {
+  font-family: var(--font-arabic);
+  font-size: 1.08em;
+  line-height: 1.85;
+}

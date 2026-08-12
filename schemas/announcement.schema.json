@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "announcement.schema.json",
+  "title": "announcement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "publishDate", "title", "body"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "publishDate": { "type": "string", "format": "date" },
+    "category": { "type": "string", "minLength": 1 },
+    "pinnedUntil": { "type": "string", "format": "date" },
+    "title": { "$ref": "#/$defs/localizedText" },
+    "body": { "$ref": "#/$defs/localizedText" }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z]{2}$" },
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    }
+  }
+}

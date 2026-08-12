@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "site-config.schema.json",
+  "title": "SiteConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["org", "bank", "donations", "prayerTimes", "fridayPrayer"],
+  "properties": {
+    "org": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "legalName",
+        "localizedName",
+        "mosqueName",
+        "address",
+        "registry",
+        "contactEmail",
+        "donationsEmail"
+      ],
+      "properties": {
+        "legalName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "localizedName": {
+          "$ref": "#/$defs/localizedName"
+        },
+        "mosqueName": {
+          "$ref": "#/$defs/localizedName"
+        },
+        "address": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["street", "postalCode", "city", "country"],
+          "properties": {
+            "street": {
+              "type": "string",
+              "minLength": 1
+            },
+            "postalCode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "city": {
+              "type": "string",
+              "minLength": 1
+            },
+            "country": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2
+            }
+          }
+        },
+        "registry": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["court", "number"],
+          "properties": {
+            "court": {
+              "type": "string",
+              "minLength": 1
+            },
+            "number": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "contactEmail": {
+          "type": "string",
+          "format": "email"
+        },
+        "donationsEmail": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    },
+    "bank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accountHolder", "iban", "bic", "bankName"],
+      "properties": {
+        "accountHolder": {
+          "type": "string",
+          "minLength": 1
+        },
+        "iban": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9A-Z]{10,30}$"
+        },
+        "bic": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{8}([A-Z0-9]{3})?$"
+        },
+        "bankName": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "donations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purposes", "taxNotice"],
+      "properties": {
+        "purposes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "verwendungszweckTemplate"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verwendungszweckTemplate": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "taxNotice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["taxOffice", "taxNumber"],
+          "properties": {
+            "taxOffice": {
+              "type": "string",
+              "minLength": 1
+            },
+            "taxNumber": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "prayerTimes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["basePath", "iqamaOffsetMinutes"],
+      "properties": {
+        "basePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "iqamaOffsetMinutes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["default", "fajr"],
+          "properties": {
+            "default": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fajr": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "fridayPrayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["khutbahTime"],
+      "properties": {
+        "khutbahTime": {
+          "type": "string",
+          "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "localizedName": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z]{2}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

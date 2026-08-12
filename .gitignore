@@ -1,0 +1,10 @@
+node_modules
+.next
+# Build output of `npm run generate:types` — never commit, see CLAUDE.md: Types.
+src/types/
+out
+build
+*.tsbuildinfo
+.env*.local
+.DS_Store
+coverage
