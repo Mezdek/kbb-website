@@ -1,6 +1,6 @@
-import fs from "node:fs";
 import path from "node:path";
 import { isRtlLanguage } from "@/lib/localized";
+import { loadMarkdownFiles } from "./markdownDirectory";
 
 export interface HausordnungDocument {
   code: string;
@@ -10,23 +10,12 @@ export interface HausordnungDocument {
 const CONTENT_DIR = path.join(process.cwd(), "content", "hausordnung");
 
 /**
- * Every `<code>.md` in the content directory, read once at module load.
- * Adding a language is dropping in a file — no registry to update, and the
- * picker can never offer a language that would render empty.
- *
- * Read eagerly rather than per request: a `readFileSync` on a path built
- * from a variable defeats static analysis, which then traces the whole
- * project into the deployment output.
+ * Every `<code>.md` in the content directory, read once at module load via
+ * the shared walker in `markdownDirectory.ts`. Adding a language is
+ * dropping in a file — no registry to update, and the picker can never
+ * offer a language that would render empty.
  */
-const DOCUMENTS: ReadonlyMap<string, string> = new Map(
-  fs
-    .readdirSync(CONTENT_DIR)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => [
-      path.basename(file, ".md"),
-      fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8"),
-    ]),
-);
+const DOCUMENTS: ReadonlyMap<string, string> = loadMarkdownFiles(CONTENT_DIR);
 
 /**
  * Languages on offer, by file name. Display names are not resolved here —

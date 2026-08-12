@@ -22,7 +22,7 @@ Ev rêzikname ji bo hemû kesên ku di mizgeftê de ne derbasdar e — endam, m�
 16. Divê di cîranan de bê fikirîn û divê ji her rengê acizkirinê bê dûrketin, bi taybetî di dema nimêja Sibehê, çalakiyên êvarê û dema hatin û çûnê de.
 17. Sekinandina tirimpêlan li hewşa pêşîn a mizgeftê, li ber deriyê avahiyê an bi awayekî ku zevî û rêyên derbasbûnê yên cîranan asteng bike, qedexe ye.
 18. Bikaranîna odeyan ji bo çalakiyan (teeziya, dawetan, ders û hwd.) pêşî hewceyê destûra desteya rêveberiyê ye.
-19. Firotin, dayuyanî û komkirina bexşîşan di mizgeftê de bê destûr qedexe ye.
+19. Firotin, daxuyanî û komkirina bexşîşan di mizgeftê de bê destûr qedexe ye.
 20. Her cûre çalakiyên siyasî, bangeşeya rêhişkî û gotinên nefretê qedexe ne. Herwiha belavkirina naverok an kiryarên ku bangî nefret an tundûtûjiyê dikin qedexe ye.
 21. Wênekêşan û tomarkirinên deng û vîdyoyê bê razîbûna kesên têkildar qedexe ne.
 22. Ji bo wendabûna tiştan, pêlavan an tiştên bi qîmet berpirsiyarî nayê girtin.

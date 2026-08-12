@@ -195,5 +195,28 @@
       "dhu-al-qadah": "Dhu al-Qada",
       "dhu-al-hijjah": "Dhu al-Hiddscha"
     }
+  },
+  "board": {
+    "roles": {
+      "vorsitzender1": "1. Vorsitzende/r",
+      "vorsitzender2": "2. Vorsitzende/r",
+      "kassierer": "Kassiererin/Kassierer",
+      "beisitzer1": "Weiteres Vorstandsmitglied",
+      "beisitzer2": "Weiteres Vorstandsmitglied"
+    },
+    "representative": "Vertretungsberechtigt gemäß § 26 BGB",
+    "notRepresentative": "Erweiterter Vorstand, nicht vertretungsberechtigt",
+    "nameWithheld": "Name auf Anfrage beim Vorstand"
+  },
+  "vorstandPage": {
+    "intro": "Der Vorstand besteht satzungsgemäß aus fünf Mitgliedern (§ 14 der Satzung): drei vertretungsberechtigten Mitgliedern im Sinne des § 26 BGB und zwei weiteren Vorstandsmitgliedern (erweiterter Vorstand).",
+    "termNote": "Die Amtszeit beträgt vier Jahre. Eine Wiederwahl ist zulässig."
+  },
+  "kontaktPage": {
+    "intro": "Fragen, Anliegen oder ein Besuchswunsch — wir freuen uns über eine Nachricht.",
+    "addressHeading": "Adresse",
+    "phoneHeading": "Telefon",
+    "emailHeading": "E-Mail",
+    "visitNote": "Ein kurzer Anruf oder eine E-Mail vor dem Besuch hilft uns, Zeit für Sie einzuplanen."
   }
 }

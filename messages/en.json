@@ -195,5 +195,28 @@
       "dhu-al-qadah": "Dhu al-Qa'dah",
       "dhu-al-hijjah": "Dhu al-Hijjah"
     }
+  },
+  "board": {
+    "roles": {
+      "vorsitzender1": "1st Chairperson",
+      "vorsitzender2": "2nd Chairperson",
+      "kassierer": "Treasurer",
+      "beisitzer1": "Additional board member",
+      "beisitzer2": "Additional board member"
+    },
+    "representative": "Authorised to represent the association under § 26 BGB",
+    "notRepresentative": "Extended board, not authorised to represent",
+    "nameWithheld": "Name available on request from the board"
+  },
+  "vorstandPage": {
+    "intro": "Under § 14 of the Satzung, the board has five fixed seats: three members authorised to represent the association under § 26 BGB, and two further board members (extended board).",
+    "termNote": "The term of office is four years. Re-election is permitted."
+  },
+  "kontaktPage": {
+    "intro": "Questions, concerns, or a request to visit — we're glad to hear from you.",
+    "addressHeading": "Address",
+    "phoneHeading": "Phone",
+    "emailHeading": "Email",
+    "visitNote": "A short call or email before visiting helps us make time for you."
   }
 }

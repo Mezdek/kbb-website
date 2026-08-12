@@ -1,7 +1,10 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { UnderConstruction } from "@/components/UnderConstruction";
+import { getContentDocument } from "@/lib/content/document";
+import { getUeberUnsVariables } from "@/lib/content/orgVariables";
+import { interpolate } from "@/lib/content/interpolate";
+import { renderMarkdown } from "@/lib/content/markdown";
 
 export default async function UeberUnsPage({
   params,
@@ -10,13 +13,24 @@ export default async function UeberUnsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("footer.columns.verein");
+
+  const document = getContentDocument("ueber-uns", locale);
+  const variables = await getUeberUnsVariables(document.lang);
+  const markdown = interpolate(document.markdown, variables);
 
   return (
     <div className="flex min-h-screen flex-col bg-secondary-shade-1">
       <div className="mx-auto w-full max-w-[1000px] bg-secondary-shade-2 shadow-[0_18px_48px_rgba(0,38,35,0.12)] md:border md:border-secondary/60">
         <Header active="verein" locale={locale} />
-        <UnderConstruction title={t("ueberUns")} />
+        <article
+          lang={document.lang}
+          dir={document.dir}
+          className={`prose-document px-4 py-8 text-base leading-[1.7] text-text-body md:px-10 md:py-11 ${
+            document.dir === "rtl" ? "font-arabic text-[1.08em] leading-[1.85]" : "font-latin"
+          }`}
+        >
+          {renderMarkdown(markdown)}
+        </article>
         <Footer />
       </div>
     </div>

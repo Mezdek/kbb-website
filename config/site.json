@@ -20,8 +20,16 @@
       "number": "VR 8988 P"
     },
     "contactEmail": "kontakt@kulturbruecke-brandenburg.de",
-    "donationsEmail": "spenden@kulturbruecke-brandenburg.de"
+    "donationsEmail": "spenden@kulturbruecke-brandenburg.de",
+    "phone": "PLATZHALTER"
   },
+  "board": [
+    { "role": "vorsitzender1", "representative": true, "name": "Mezdek Osman" },
+    { "role": "vorsitzender2", "representative": true, "name": "Mohamad Nadim Tabateb" },
+    { "role": "kassierer", "representative": true, "name": "Mohamad Najm" },
+    { "role": "beisitzer1", "representative": false },
+    { "role": "beisitzer2", "representative": false }
+  ],
   "bank": {
     "accountHolder": "Kulturbrücke Brandenburg e.V.",
     "iban": "DE12345678901234567890",

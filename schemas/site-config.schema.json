@@ -4,7 +4,7 @@
   "title": "SiteConfig",
   "type": "object",
   "additionalProperties": false,
-  "required": ["org", "bank", "donations", "prayerTimes", "fridayPrayer"],
+  "required": ["org", "bank", "donations", "board", "prayerTimes", "fridayPrayer"],
   "properties": {
     "org": {
       "type": "object",
@@ -75,6 +75,34 @@
         "donationsEmail": {
           "type": "string",
           "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "board": {
+      "description": "The five fixed Vorstand seats",
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "representative"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["vorsitzender1", "vorsitzender2", "kassierer", "beisitzer1", "beisitzer2"]
+          },
+          "representative": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },

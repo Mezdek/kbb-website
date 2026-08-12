@@ -10,7 +10,8 @@ async function loadWith(files: string[]) {
   vi.resetModules();
   vi.doMock("node:fs", () => ({
     default: {
-      readdirSync: () => files,
+      readdirSync: () =>
+        files.map((name) => ({ name, isDirectory: () => false, isFile: () => true })),
       readFileSync: (filePath: string) => `# ${filePath}`,
     },
   }));
