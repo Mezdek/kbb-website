@@ -59,9 +59,9 @@ export function PrayerGrid({
   const [nowMinutes, setNowMinutes] = useState(initialNowMinutes);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setNowMinutes(timeToMinutes(getBerlinDateParts().hhmm));
-    }, 30_000);
+    const tick = () => setNowMinutes(timeToMinutes(getBerlinDateParts().hhmm));
+    tick();
+    const interval = setInterval(tick, 30_000);
     return () => clearInterval(interval);
   }, []);
 

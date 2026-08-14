@@ -14,6 +14,8 @@ import {
 } from "@/lib/content/announcements";
 import { resolveCategoryLabel } from "@/lib/content/categoryLabel";
 
+export const revalidate = 60;
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
