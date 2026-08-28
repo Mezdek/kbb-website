@@ -20,7 +20,7 @@
       "number": "VR 8988 P"
     },
     "contactEmail": "kontakt@kulturbruecke-brandenburg.de",
-    "donationsEmail": "spenden@kulturbruecke-brandenburg.de",
+    "donationsEmail": "kontakt@kulturbruecke-brandenburg.de",
     "phone": "PLATZHALTER"
   },
   "board": [
@@ -32,18 +32,12 @@
   ],
   "bank": {
     "accountHolder": "Kulturbrücke Brandenburg e.V.",
-    "iban": "DE12345678901234567890",
+    "iban": "DE65500105175445842768",
     "bic": "WELADED1PMB",
     "bankName": "Mittelbrandenburgische Sparkasse"
   },
   "donations": {
-    "purposes": [
-      { "id": "zakat", "verwendungszweckTemplate": "ZAKAT {year}" },
-      { "id": "zakatAlFitr", "verwendungszweckTemplate": "ZAKAT AL-FITR {year}" },
-      { "id": "sadaqa", "verwendungszweckTemplate": "SADAQA {year}" },
-      { "id": "projekte", "verwendungszweckTemplate": "PROJEKTE {year}" },
-      { "id": "moscheekauf", "verwendungszweckTemplate": "MOSCHEEKAUF {year}" }
-    ],
+    "purposes": [{ "id": "general", "verwendungszweckTemplate": "SPENDE {year}" }],
     "taxNotice": {
       "taxOffice": "Finanzamt Brandenburg",
       "taxNumber": "048/141/00000"

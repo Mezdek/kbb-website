@@ -158,25 +158,9 @@
     "selectedLabel": "selected",
     "legalNotice": "The association is recognised as non-profit ({taxOffice}, tax number {taxNumber}). Donation receipts are issued by 31 January of the following year — please include your name in the payment reference, or write to {email}. (Placeholder text pending professional review of the tax wording.)",
     "purposes": {
-      "zakat": {
-        "name": "Zakat",
-        "description": "Obligatory almsgiving, managed separately and passed on only to those entitled to it."
-      },
-      "zakatAlFitr": {
-        "name": "Zakat al-Fitr",
-        "description": "Before the Eid prayer, per person. The amount is announced each year."
-      },
-      "sadaqa": {
-        "name": "Sadaqa",
-        "description": "Voluntary donation for the mosque's day-to-day operation."
-      },
-      "projekte": {
-        "name": "Projects",
-        "description": "Lessons, youth work and neighbourhood events."
-      },
-      "moscheekauf": {
-        "name": "Mosque purchase",
-        "description": "Purchase of the property. Progress is reported yearly at the general meeting."
+      "general": {
+        "name": "General donation",
+        "description": "Voluntary donation for the work of the association and the mosque."
       }
     }
   },
