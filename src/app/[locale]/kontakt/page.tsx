@@ -44,7 +44,7 @@ export default async function KontaktPage({ params }: { params: Promise<{ locale
               {tPage("phoneHeading")}
             </dt>
             <dd className="mt-1 text-sm text-primary">
-              <Ltr className="block">{config.org.phone ?? "PLATZHALTER"}</Ltr>
+              <Ltr className="block">{config.org.phone}</Ltr>
             </dd>
           </div>
           <div>

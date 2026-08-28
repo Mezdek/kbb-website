@@ -16,7 +16,9 @@ function formatRepresentatives(
 ): string {
   return board
     .filter((member) => member.representative)
-    .map((member) => (member.name ? `${member.name} — ${roleLabel(member.role)}` : roleLabel(member.role)))
+    .map((member) =>
+      member.name ? `${member.name} — ${roleLabel(member.role)}` : roleLabel(member.role),
+    )
     .join("  \n");
 }
 
@@ -51,7 +53,7 @@ export async function getImpressumVariables(locale: string): Promise<Record<stri
     city: config.org.address.city,
     country: countryName ?? config.org.address.country,
     boardRepresentatives: formatRepresentatives(config.board, roleLabel),
-    phone: config.org.phone ?? "PLATZHALTER",
+    phone: config.org.phone,
     contactEmail: config.org.contactEmail,
     registryCourt: config.org.registry.court,
     registryNumber: config.org.registry.number,
@@ -98,14 +100,24 @@ async function contentVariablePool(locale: string): Promise<Record<string, strin
   };
 }
 
-function pick<T extends string>(pool: Record<string, string>, keys: readonly T[]): Record<T, string> {
+function pick<T extends string>(
+  pool: Record<string, string>,
+  keys: readonly T[],
+): Record<T, string> {
   return Object.fromEntries(keys.map((key) => [key, pool[key]!])) as Record<T, string>;
 }
 
 /** `{{placeholder}}` values for `content/ueber-uns/<lang>.md`. */
 export async function getUeberUnsVariables(locale: string): Promise<Record<string, string>> {
   const pool = await contentVariablePool(locale);
-  return pick(pool, ["orgName", "city", "registryNumber", "registryCourt", "mosqueName", "contactEmail"]);
+  return pick(pool, [
+    "orgName",
+    "city",
+    "registryNumber",
+    "registryCourt",
+    "mosqueName",
+    "contactEmail",
+  ]);
 }
 
 /** `{{placeholder}}` values for `content/mitglied-werden/<lang>.md`. */
