@@ -195,6 +195,10 @@
     "intro": "Der Vorstand besteht satzungsgemäß aus fünf Mitgliedern (§ 14 der Satzung): drei vertretungsberechtigten Mitgliedern im Sinne des § 26 BGB und zwei weiteren Vorstandsmitgliedern (erweiterter Vorstand).",
     "termNote": "Die Amtszeit beträgt vier Jahre. Eine Wiederwahl ist zulässig."
   },
+  "dokumentePage": {
+    "intro": "Offizielle Dokumente des Vereins. Satzung und Geschäftsordnung liegen ausschließlich auf Deutsch vor, da es sich um rechtlich verbindliche Fassungen handelt.",
+    "fileNote": "PDF"
+  },
   "kontaktPage": {
     "intro": "Fragen, Anliegen oder ein Besuchswunsch — wir freuen uns über eine Nachricht.",
     "addressHeading": "Adresse",

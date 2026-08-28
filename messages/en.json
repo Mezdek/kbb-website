@@ -195,6 +195,10 @@
     "intro": "Under § 14 of the Satzung, the board has five fixed seats: three members authorised to represent the association under § 26 BGB, and two further board members (extended board).",
     "termNote": "The term of office is four years. Re-election is permitted."
   },
+  "dokumentePage": {
+    "intro": "Official documents of the association. The Satzung (statutes) and Geschäftsordnung (rules of procedure) are only available in German, as these are the legally binding versions.",
+    "fileNote": "PDF"
+  },
   "kontaktPage": {
     "intro": "Questions, concerns, or a request to visit — we're glad to hear from you.",
     "addressHeading": "Address",
