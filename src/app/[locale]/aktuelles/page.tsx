@@ -93,41 +93,49 @@ export default async function AktuellesPage({
         </div>
 
         <div className="px-4 py-2 md:px-10">
-          <div className="flex flex-col">
-            {items.map((item) => (
-              <AnnouncementItem
-                key={item.slug}
-                item={item}
-                pinnedLabel={t("pinnedBadge")}
-                locale={locale}
-              />
-            ))}
-          </div>
+          {filtered.length === 0 ? (
+            <p className="py-10 text-center text-sm leading-[1.65] text-text-secondary md:text-base">
+              {t("empty")}
+            </p>
+          ) : (
+            <>
+              <div className="flex flex-col">
+                {items.map((item) => (
+                  <AnnouncementItem
+                    key={item.slug}
+                    item={item}
+                    pinnedLabel={t("pinnedBadge")}
+                    locale={locale}
+                  />
+                ))}
+              </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-3 py-6 text-sm text-text-secondary">
-            <span>
-              {t("paginationLabel", {
-                shown: formatNumeral(items.length, locale),
-                total: formatNumeral(filtered.length, locale),
-              })}
-            </span>
-            <div className="flex gap-2">
-              <ButtonLink
-                href={pageHref(Math.max(1, page - 1))}
-                variant={page <= 1 ? "inactive" : "utility"}
-                aria-disabled={page <= 1}
-              >
-                {t("newer")}
-              </ButtonLink>
-              <ButtonLink
-                href={pageHref(Math.min(totalPages, page + 1))}
-                variant={page >= totalPages ? "inactive" : "utility"}
-                aria-disabled={page >= totalPages}
-              >
-                {t("older")}
-              </ButtonLink>
-            </div>
-          </div>
+              <div className="flex flex-wrap items-center justify-between gap-3 py-6 text-sm text-text-secondary">
+                <span>
+                  {t("paginationLabel", {
+                    shown: formatNumeral(items.length, locale),
+                    total: formatNumeral(filtered.length, locale),
+                  })}
+                </span>
+                <div className="flex gap-2">
+                  <ButtonLink
+                    href={pageHref(Math.max(1, page - 1))}
+                    variant={page <= 1 ? "inactive" : "utility"}
+                    aria-disabled={page <= 1}
+                  >
+                    {t("newer")}
+                  </ButtonLink>
+                  <ButtonLink
+                    href={pageHref(Math.min(totalPages, page + 1))}
+                    variant={page >= totalPages ? "inactive" : "utility"}
+                    aria-disabled={page >= totalPages}
+                  >
+                    {t("older")}
+                  </ButtonLink>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         <Footer />

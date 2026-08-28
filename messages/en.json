@@ -133,6 +133,7 @@
     "title": "Announcements",
     "intro": "Dates, notices and messages from the association. Pinned announcements stay at the top for as long as they apply.",
     "filterAll": "All",
+    "empty": "Currently no announcement, stay tuned...",
     "pinnedBadge": "Pinned",
     "paginationLabel": "{shown} of {total} announcements",
     "older": "Older",

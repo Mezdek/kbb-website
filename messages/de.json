@@ -133,6 +133,7 @@
     "title": "Ankündigungen",
     "intro": "Termine, Hinweise und Mitteilungen des Vereins. Angeheftete Ankündigungen stehen oben und bleiben dort, solange sie gelten.",
     "filterAll": "Alle",
+    "empty": "Derzeit keine Ankündigungen, schauen Sie bald wieder vorbei...",
     "pinnedBadge": "Angeheftet",
     "paginationLabel": "{shown} von {total} Ankündigungen",
     "older": "Ältere",
