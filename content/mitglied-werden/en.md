@@ -12,9 +12,13 @@ To apply, write to <{{contactEmail}}>.
 
 ## Fees
 
-Fees are collected monthly; current rates are set out in the board's Beitragsordnung. Reduced or waived fees exist for, among others, students, recipients of Bürgergeld, and members with a severe disability.
+Fees are collected monthly and are due at the start of the month. The following monthly rates apply:
 
-*[Placeholder — current fee amount to be added.]*
+- Standard fee: €10 — all members without a reduction
+- Reduced fee: €5 — pupils, students, recipients of Bürgergeld, and hardship cases
+- Fee waived: €0 — members with a disability rating (GdB) of at least 50, honorary members, and special hardship cases
+
+These rates are set out in the Beitragsordnung per Beschluss (board resolution) No. 2026-0003 of 19 July 2026, in effect since 1 October 2026.
 
 ## Volunteer hours
 

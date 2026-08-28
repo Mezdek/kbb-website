@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageShell } from "@/components/PageShell";
 import { ButtonLink } from "@/components/Button";
 import { PrintButton } from "@/components/PrintButton";
 import { PrayerTable } from "@/components/PrayerTable";
@@ -145,98 +146,108 @@ export default async function GebetszeitenPage({
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-secondary-shade-1">
-      <div className="mx-auto w-full max-w-[1400px] bg-secondary-shade-2 shadow-[0_18px_48px_rgba(0,38,35,0.12)] print:shadow-none md:border md:border-secondary/60 print:border-0">
-        <div className="print:hidden">
-          <Header active="moschee" locale={locale} />
-        </div>
+    <PageShell>
+      <div className="print:hidden">
+        <Header active="moschee" locale={locale} />
+      </div>
 
-        <div className="px-4 pt-9 md:px-10 print:px-0">
-          <div className="mb-2.5 text-xs uppercase tracking-[0.2em] text-text-secondary md:text-[12px]">
-            {t("eyebrow")}
-          </div>
-          <h1 className="mb-2.5 text-[26px] font-normal text-primary md:text-[34px]">{desktopHeading}</h1>
-          <p className="max-w-[62ch] text-sm leading-[1.65] text-text-secondary md:text-base print:hidden">
-            {t("methodNote", {
-              offset: formatNumeral(config.prayerTimes.iqamaOffsetMinutes.default, locale),
-              fajrOffset: formatNumeral(config.prayerTimes.iqamaOffsetMinutes.fajr, locale),
-            })}
-          </p>
-          <p className="mt-1 text-sm leading-[1.65] text-text-secondary md:text-base print:hidden">
-            {t("fridayKhutbah", { time: config.fridayPrayer.khutbahTime })}
-          </p>
-          <div className="mt-4 hidden md:block">
-            <PrayerViewToggle view={view} />
-          </div>
+      <div className="px-4 pt-9 md:px-10 print:px-0">
+        <div className="mb-2.5 text-xs uppercase tracking-[0.2em] text-text-secondary md:text-[12px]">
+          {t("eyebrow")}
         </div>
+        <h1 className="mb-2.5 text-[26px] font-normal text-primary md:text-[34px]">
+          {desktopHeading}
+        </h1>
+        <p className="max-w-[62ch] text-sm leading-[1.65] text-text-secondary md:text-base print:hidden">
+          {t("methodNote", {
+            offset: formatNumeral(config.prayerTimes.iqamaOffsetMinutes.default, locale),
+            fajrOffset: formatNumeral(config.prayerTimes.iqamaOffsetMinutes.fajr, locale),
+          })}
+        </p>
+        <p className="mt-1 text-sm leading-[1.65] text-text-secondary md:text-base print:hidden">
+          {t("fridayKhutbah", { time: config.fridayPrayer.khutbahTime })}
+        </p>
+        <div className="mt-4 hidden md:block">
+          <PrayerViewToggle view={view} />
+        </div>
+      </div>
 
-        {todayResult.status === "ok" ? (
-          <div className="mx-4 mt-7 flex flex-wrap items-center justify-between gap-4 bg-primary-shade-1 px-5 py-5 text-secondary-shade-2 md:mx-10 print:hidden">
-            <div>
-              <div className="mb-1.5 text-xs uppercase tracking-[0.18em] text-secondary-shade-1">
-                {t("todayCallout", {
-                  date: new Intl.DateTimeFormat(numeralLocale, {
-                    day: "numeric",
-                    month: "long",
-                  }).format(new Date(`${todayResult.day.date}T12:00:00Z`)),
-                })}
-              </div>
-              <div className="text-[15px] md:text-base">
-                {tBand("nextPrayer")}:{" "}
-                <strong className="font-medium">
-                  {tBand(`names.${nextKey!}`)} <Ltr>{todayResult.day[nextKey!]}</Ltr>
-                </strong>
-              </div>
+      {todayResult.status === "ok" ? (
+        <div className="mx-4 mt-7 flex flex-wrap items-center justify-between gap-4 bg-primary-shade-1 px-5 py-5 text-secondary-shade-2 md:mx-10 print:hidden">
+          <div>
+            <div className="mb-1.5 text-xs uppercase tracking-[0.18em] text-secondary-shade-1">
+              {t("todayCallout", {
+                date: new Intl.DateTimeFormat(numeralLocale, {
+                  day: "numeric",
+                  month: "long",
+                }).format(new Date(`${todayResult.day.date}T12:00:00Z`)),
+              })}
             </div>
-            <div className="flex gap-2.5">
-              <div className="hidden gap-2.5 md:flex">
-                <ButtonLink href={prevHref} variant="utilityOnDark" aria-label={t("table.switchMonth")}>
-                  ‹
-                </ButtonLink>
-                <ButtonLink href={nextHref} variant="utilityOnDark" aria-label={t("table.switchMonth")}>
-                  ›
-                </ButtonLink>
-              </div>
-              <PrintButton variant="utilityOnDark">⎙ {t("table.printA4")}</PrintButton>
+            <div className="text-[15px] md:text-base">
+              {tBand("nextPrayer")}:{" "}
+              <strong className="font-medium">
+                {tBand(`names.${nextKey!}`)} <Ltr>{todayResult.day[nextKey!]}</Ltr>
+              </strong>
             </div>
           </div>
-        ) : (
-          <div className="mx-4 mt-7 bg-primary-shade-1 px-5 py-5 text-secondary-shade-2 md:mx-10 print:hidden">
-            <p className="text-sm">{tBand("noTimesUploaded")}</p>
+          <div className="flex gap-2.5">
+            <div className="hidden gap-2.5 md:flex">
+              <ButtonLink
+                href={prevHref}
+                variant="utilityOnDark"
+                aria-label={t("table.switchMonth")}
+              >
+                ‹
+              </ButtonLink>
+              <ButtonLink
+                href={nextHref}
+                variant="utilityOnDark"
+                aria-label={t("table.switchMonth")}
+              >
+                ›
+              </ButtonLink>
+            </div>
+            <PrintButton variant="utilityOnDark">⎙ {t("table.printA4")}</PrintButton>
           </div>
-        )}
+        </div>
+      ) : (
+        <div className="mx-4 mt-7 bg-primary-shade-1 px-5 py-5 text-secondary-shade-2 md:mx-10 print:hidden">
+          <p className="text-sm">{tBand("noTimesUploaded")}</p>
+        </div>
+      )}
 
-        <div className="py-8 md:px-10 md:py-11 print:px-0">
-          <div className="hidden px-4 md:block md:px-0 print:block print:px-4">
-            {desktopOk ? (
-              <>
-                <PrayerTable
-                  days={desktopDays}
-                  todayIso={todayIso}
-                  locale={locale}
-                  mode={view}
-                  missing={desktopMissing}
-                />
-                <div className="mt-4.5 text-sm text-text-secondary print:hidden">{t("table.note")}</div>
-              </>
-            ) : (
-              <p className="text-sm text-text-secondary">{tBand("noTimesUploaded")}</p>
-            )}
-          </div>
-
-          {mobileResult.status === "ok" ? (
-            <PrayerDayView day={mobileResult.day} todayIso={todayIso} locale={locale} />
+      <div className="py-8 md:px-10 md:py-11 print:px-0">
+        <div className="hidden px-4 md:block md:px-0 print:block print:px-4">
+          {desktopOk ? (
+            <>
+              <PrayerTable
+                days={desktopDays}
+                todayIso={todayIso}
+                locale={locale}
+                mode={view}
+                missing={desktopMissing}
+              />
+              <div className="mt-4.5 text-sm text-text-secondary print:hidden">
+                {t("table.note")}
+              </div>
+            </>
           ) : (
-            <div className="px-4 md:hidden print:hidden">
-              <p className="text-sm text-text-secondary">{tBand("noTimesUploaded")}</p>
-            </div>
+            <p className="text-sm text-text-secondary">{tBand("noTimesUploaded")}</p>
           )}
         </div>
 
-        <div className="print:hidden">
-          <Footer />
-        </div>
+        {mobileResult.status === "ok" ? (
+          <PrayerDayView day={mobileResult.day} todayIso={todayIso} locale={locale} />
+        ) : (
+          <div className="px-4 md:hidden print:hidden">
+            <p className="text-sm text-text-secondary">{tBand("noTimesUploaded")}</p>
+          </div>
+        )}
       </div>
-    </div>
+
+      <div className="print:hidden">
+        <Footer />
+      </div>
+    </PageShell>
   );
 }

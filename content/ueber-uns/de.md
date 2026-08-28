@@ -14,12 +14,4 @@ Wir fördern die internationale Gesinnung, die Toleranz zwischen Kulturen und Re
 
 Unsere Angebote zur Integration, Bildung und Völkerverständigung stehen allen Menschen offen, unabhängig von Herkunft, Religion oder Weltanschauung.
 
-## Geschichte
-
-*[Platzhalter — Gründungsjahr und Entstehungsgeschichte werden ergänzt.]*
-
-## Der Verein heute
-
-*[Platzhalter — Mitgliederzahl, Zahl der Ehrenamtlichen, laufende Angebote.]*
-
 Fragen zum Verein beantworten wir gerne — siehe [Kontakt](mailto:{{contactEmail}}).

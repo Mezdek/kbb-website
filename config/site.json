@@ -20,30 +20,24 @@
       "number": "VR 8988 P"
     },
     "contactEmail": "kontakt@kulturbruecke-brandenburg.de",
-    "donationsEmail": "spenden@kulturbruecke-brandenburg.de",
+    "donationsEmail": "kontakt@kulturbruecke-brandenburg.de",
     "phone": "PLATZHALTER"
   },
   "board": [
     { "role": "vorsitzender1", "representative": true, "name": "Mezdek Osman" },
     { "role": "vorsitzender2", "representative": true, "name": "Mohamad Nadim Tabateb" },
     { "role": "kassierer", "representative": true, "name": "Mohamad Najm" },
-    { "role": "beisitzer1", "representative": false },
-    { "role": "beisitzer2", "representative": false }
+    { "role": "beisitzer1", "representative": false, "name": "Abdullah Shawerdi" },
+    { "role": "beisitzer2", "representative": false, "name": "Yasser Al Haj Abdalwahab" }
   ],
   "bank": {
     "accountHolder": "Kulturbrücke Brandenburg e.V.",
-    "iban": "DE12345678901234567890",
+    "iban": "DE65500105175445842768",
     "bic": "WELADED1PMB",
     "bankName": "Mittelbrandenburgische Sparkasse"
   },
   "donations": {
-    "purposes": [
-      { "id": "zakat", "verwendungszweckTemplate": "ZAKAT {year}" },
-      { "id": "zakatAlFitr", "verwendungszweckTemplate": "ZAKAT AL-FITR {year}" },
-      { "id": "sadaqa", "verwendungszweckTemplate": "SADAQA {year}" },
-      { "id": "projekte", "verwendungszweckTemplate": "PROJEKTE {year}" },
-      { "id": "moscheekauf", "verwendungszweckTemplate": "MOSCHEEKAUF {year}" }
-    ],
+    "purposes": [{ "id": "general", "verwendungszweckTemplate": "SPENDE {year}" }],
     "taxNotice": {
       "taxOffice": "Finanzamt Brandenburg",
       "taxNumber": "048/141/00000"

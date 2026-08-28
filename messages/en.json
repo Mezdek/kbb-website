@@ -133,6 +133,7 @@
     "title": "Announcements",
     "intro": "Dates, notices and messages from the association. Pinned announcements stay at the top for as long as they apply.",
     "filterAll": "All",
+    "empty": "Currently no announcement, stay tuned...",
     "pinnedBadge": "Pinned",
     "paginationLabel": "{shown} of {total} announcements",
     "older": "Older",
@@ -158,25 +159,9 @@
     "selectedLabel": "selected",
     "legalNotice": "The association is recognised as non-profit ({taxOffice}, tax number {taxNumber}). Donation receipts are issued by 31 January of the following year — please include your name in the payment reference, or write to {email}. (Placeholder text pending professional review of the tax wording.)",
     "purposes": {
-      "zakat": {
-        "name": "Zakat",
-        "description": "Obligatory almsgiving, managed separately and passed on only to those entitled to it."
-      },
-      "zakatAlFitr": {
-        "name": "Zakat al-Fitr",
-        "description": "Before the Eid prayer, per person. The amount is announced each year."
-      },
-      "sadaqa": {
-        "name": "Sadaqa",
-        "description": "Voluntary donation for the mosque's day-to-day operation."
-      },
-      "projekte": {
-        "name": "Projects",
-        "description": "Lessons, youth work and neighbourhood events."
-      },
-      "moscheekauf": {
-        "name": "Mosque purchase",
-        "description": "Purchase of the property. Progress is reported yearly at the general meeting."
+      "general": {
+        "name": "General donation",
+        "description": "Voluntary donation for the work of the association and the mosque."
       }
     }
   },
@@ -204,13 +189,15 @@
       "beisitzer1": "Additional board member",
       "beisitzer2": "Additional board member"
     },
-    "representative": "Authorised to represent the association under § 26 BGB",
-    "notRepresentative": "Extended board, not authorised to represent",
     "nameWithheld": "Name available on request from the board"
   },
   "vorstandPage": {
     "intro": "Under § 14 of the Satzung, the board has five fixed seats: three members authorised to represent the association under § 26 BGB, and two further board members (extended board).",
     "termNote": "The term of office is four years. Re-election is permitted."
+  },
+  "dokumentePage": {
+    "intro": "Official documents of the association. The Satzung (statutes) and Geschäftsordnung (rules of procedure) are only available in German, as these are the legally binding versions.",
+    "fileNote": "PDF"
   },
   "kontaktPage": {
     "intro": "Questions, concerns, or a request to visit — we're glad to hear from you.",

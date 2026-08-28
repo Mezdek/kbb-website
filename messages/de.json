@@ -133,6 +133,7 @@
     "title": "Ankündigungen",
     "intro": "Termine, Hinweise und Mitteilungen des Vereins. Angeheftete Ankündigungen stehen oben und bleiben dort, solange sie gelten.",
     "filterAll": "Alle",
+    "empty": "Derzeit keine Ankündigungen, schauen Sie bald wieder vorbei...",
     "pinnedBadge": "Angeheftet",
     "paginationLabel": "{shown} von {total} Ankündigungen",
     "older": "Ältere",
@@ -158,25 +159,9 @@
     "selectedLabel": "gewählt",
     "legalNotice": "Der Verein ist als gemeinnützig anerkannt ({taxOffice}, Steuernummer {taxNumber}). Spendenquittungen stellen wir bis zum 31. Januar des Folgejahres aus — geben Sie dafür bitte Ihren Namen im Verwendungszweck mit an oder schreiben Sie an {email}. (Platzhaltertext, ausstehende steuerliche Prüfung durch Fachleute.)",
     "purposes": {
-      "zakat": {
-        "name": "Zakat",
-        "description": "Pflichtabgabe, wird getrennt verwaltet und ausschließlich an Berechtigte weitergegeben."
-      },
-      "zakatAlFitr": {
-        "name": "Zakat al-Fitr",
-        "description": "Vor dem Eid-Gebet, pro Person. Höhe wird jedes Jahr bekannt gegeben."
-      },
-      "sadaqa": {
-        "name": "Sadaqa",
-        "description": "Freiwillige Spende für den laufenden Betrieb der Moschee."
-      },
-      "projekte": {
-        "name": "Projekte",
-        "description": "Unterricht, Jugendarbeit, Nachbarschaftsveranstaltungen."
-      },
-      "moscheekauf": {
-        "name": "Moscheekauf",
-        "description": "Erwerb der Immobilie. Zwischenstand wird jährlich in der Mitgliederversammlung berichtet."
+      "general": {
+        "name": "Allgemeine Spende",
+        "description": "Freiwillige Spende für die Arbeit des Vereins und der Moschee."
       }
     }
   },
@@ -204,13 +189,15 @@
       "beisitzer1": "Weiteres Vorstandsmitglied",
       "beisitzer2": "Weiteres Vorstandsmitglied"
     },
-    "representative": "Vertretungsberechtigt gemäß § 26 BGB",
-    "notRepresentative": "Erweiterter Vorstand, nicht vertretungsberechtigt",
     "nameWithheld": "Name auf Anfrage beim Vorstand"
   },
   "vorstandPage": {
     "intro": "Der Vorstand besteht satzungsgemäß aus fünf Mitgliedern (§ 14 der Satzung): drei vertretungsberechtigten Mitgliedern im Sinne des § 26 BGB und zwei weiteren Vorstandsmitgliedern (erweiterter Vorstand).",
     "termNote": "Die Amtszeit beträgt vier Jahre. Eine Wiederwahl ist zulässig."
+  },
+  "dokumentePage": {
+    "intro": "Offizielle Dokumente des Vereins. Satzung und Geschäftsordnung liegen ausschließlich auf Deutsch vor, da es sich um rechtlich verbindliche Fassungen handelt.",
+    "fileNote": "PDF"
   },
   "kontaktPage": {
     "intro": "Fragen, Anliegen oder ein Besuchswunsch — wir freuen uns über eine Nachricht.",
