@@ -12,9 +12,13 @@ Für den Aufnahmeantrag wenden Sie sich an <{{contactEmail}}>.
 
 ## Beiträge
 
-Die Beiträge werden monatlich erhoben; die aktuellen Sätze stehen in der vom Vorstand beschlossenen Beitragsordnung. Ermäßigte und beitragsfreie Sätze gibt es unter anderem für Studierende, Bürgergeld-Empfängerinnen und -Empfänger sowie schwerbehinderte Mitglieder.
+Die Beiträge werden monatlich erhoben und sind zu Beginn des Monats fällig. Es gelten folgende monatliche Sätze:
 
-*[Platzhalter — aktuelle Beitragshöhe wird ergänzt.]*
+- Standardbeitrag: 10 Euro — alle Mitglieder ohne Ermäßigung
+- Ermäßigter Beitrag: 5 Euro — Schüler/innen, Studierende, Empfänger/innen von Bürgergeld sowie Härtefälle
+- Beitragsfrei: 0 Euro — Mitglieder mit einem Grad der Behinderung (GdB) von mindestens 50, Ehrenmitglieder sowie besondere Härtefälle
+
+Grundlage ist die Beitragsordnung gemäß Beschluss Nr. 2026-0003 vom 19. Juli 2026, in Kraft seit dem 1. Oktober 2026.
 
 ## Ehrenamtliche Mitarbeit
 
