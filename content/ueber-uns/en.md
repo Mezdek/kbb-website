@@ -14,12 +14,4 @@ We promote international understanding, tolerance between cultures and religions
 
 Our integration, education and outreach offerings are open to all people, regardless of origin, religion or belief.
 
-## History
-
-*[Placeholder — founding year and history to be added.]*
-
-## The association today
-
-*[Placeholder — membership numbers, volunteers, current programmes.]*
-
 Questions about the association are welcome — see [Contact](mailto:{{contactEmail}}).
