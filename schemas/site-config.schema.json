@@ -16,7 +16,8 @@
         "address",
         "registry",
         "contactEmail",
-        "donationsEmail"
+        "donationsEmail",
+        "phone"
       ],
       "properties": {
         "legalName": {
