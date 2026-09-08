@@ -1,19 +1,13 @@
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageShell } from "@/components/PageShell";
 import { PrayerBand } from "@/components/PrayerBand";
 import { ButtonLink } from "@/components/Button";
 import { Ltr } from "@/components/Ltr";
-import { AnnouncementItem } from "@/components/AnnouncementItem";
+import { AnnouncementsTeaser } from "@/components/AnnouncementsTeaser";
 import { getSiteConfig } from "@/lib/config";
 import { resolveLocalized } from "@/lib/localized";
-import {
-  getAnnouncements,
-  isAnnouncementPinned,
-  resolveLocalizedText,
-} from "@/lib/content/announcements";
-import { resolveCategoryLabel } from "@/lib/content/categoryLabel";
 
 export const revalidate = 60;
 
@@ -22,31 +16,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
 
   const t = await getTranslations("home");
-  const tAnnouncements = await getTranslations("announcements");
-  const messages = await getMessages();
-  const categories = messages.categories as Record<string, unknown> | undefined;
 
   const config = getSiteConfig();
   const orgName = resolveLocalized(config.org.localizedName, locale).text;
   const mosqueName = resolveLocalized(config.org.mosqueName, locale).text;
-  const now = new Date();
-  const teaserItems = getAnnouncements(now)
-    .slice(0, 2)
-    .map((announcement) => {
-      const categoryLabel = announcement.category
-        ? resolveCategoryLabel(categories, announcement.category)
-        : undefined;
-      return {
-        slug: announcement.slug,
-        category: announcement.category,
-        categoryLabel: categoryLabel?.label,
-        categoryIsTranslated: categoryLabel?.isTranslated,
-        pinned: isAnnouncementPinned(announcement, now),
-        publishDate: announcement.publishDate,
-        title: resolveLocalizedText(announcement.title, locale),
-        excerpt: resolveLocalizedText(announcement.body, locale),
-      };
-    });
 
   return (
     <PageShell>
@@ -82,16 +55,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 {t("aktuelles.all")}
               </ButtonLink>
             </div>
-            <div className="flex flex-col">
-              {teaserItems.map((item) => (
-                <AnnouncementItem
-                  key={item.slug}
-                  item={item}
-                  pinnedLabel={tAnnouncements("pinnedBadge")}
-                  locale={locale}
-                />
-              ))}
-            </div>
+            <AnnouncementsTeaser limit={2} />
           </div>
         </div>
 

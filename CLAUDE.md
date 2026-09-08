@@ -29,7 +29,9 @@ different — do not silently substitute.
 - **Any prayer-time library** — see "Prayer times" below.
 - **Animation or motion libraries** — nothing on this site needs them.
 - **A payment provider** — donations are bank transfer only.
-- **A CMS or database** — all content is hand-authored JSON in this repo.
+- **A CMS or database** — all content except announcements is hand-authored
+  JSON in this repo. Announcements are fetched from `/api/announcements`;
+  see Content > Announcements.
 - **State management libraries** — there is no client state worth managing.
 
 Do not add dependencies that are not already listed without asking first.
@@ -279,11 +281,33 @@ calculation in this repository, for any reason.**
 
 ## Content
 
-All content is hand-authored and committed to this repo — JSON for structured
-records, Markdown for long-form documents. One author. No admin interface, no
-CMS.
+Most content is hand-authored and committed to this repo — JSON for
+structured records, Markdown for long-form documents. One author. No admin
+interface, no CMS. **Announcements are the one exception** — see below.
 
 ### Announcements
+
+**Not hand-authored JSON in this repo.** Announcements used to be JSON files
+under `content/announcements/`, read from disk at build time; that folder is
+gone. They are now fetched client-side:
+
+- `src/hooks/useAnnouncements.ts` — a hook that calls `GET
+  /api/announcements` and returns the raw list plus loading/error state.
+- `src/app/api/announcements/route.ts` — the endpoint. Currently a
+  **placeholder** that always returns `[]`. This is where the real source (a
+  database, a headless CMS, another service) gets wired in — do that in this
+  one route, not by re-fetching ad hoc elsewhere (absolute rule 7).
+- `src/lib/content/announcements.ts` — pure functions (`sortAnnouncements`,
+  `filterByCategory`, `getOccurringCategories`, `resolveLocalizedText`) that
+  work on whatever list the hook returns. No filesystem access left here.
+- `AnnouncementItem` and the components that render lists of it
+  (`AnnouncementsList` for `/aktuelles`, `AnnouncementsTeaser` for the
+  homepage) are Client Components, since the data they render only exists
+  after the browser-side fetch resolves.
+
+`schemas/announcement.schema.json` is still authoritative for the shape each
+item in the endpoint's response must have — the block below is illustration,
+not specification:
 
 ```jsonc
 {
@@ -296,17 +320,18 @@ CMS.
 }
 ```
 
-`schemas/announcement.schema.json` is authoritative for this shape — the block
-above is illustration, not specification.
-
 - **`category` is free text and optional.** Any string is valid. It is
   translated through the normal message lookup (`categories.<slug>`), falling
   back to English, then to the raw slug. There is no fixed list, no union type,
   no registry file. An announcement without a category renders with the default
   icon and does not appear in the filter.
 - **Icons by filename convention** — `<category>.svg` if it exists, otherwise
-  `default.svg`. Resolved at build time from the filesystem, not with a
-  browser-side error handler.
+  `default.svg`, still resolved from the filesystem (`readCategoryIconMarkup`
+  in `src/lib/content/categoryIcon.ts`), never a browser-side error handler.
+  That lookup now runs behind `src/app/api/category-icons/route.ts` — the
+  client `CategoryIcon` component fetches from it — because it's called from
+  the same client-rendered `AnnouncementItem` described above. The resolution
+  logic itself did not move or duplicate, only how it's reached.
 - **The filter lists categories that actually occur** in the current set, not
   every category ever defined.
 - **`pinnedUntil` is a date, not a boolean.** Pinned items sort above the rest
@@ -327,8 +352,9 @@ Same pattern: hand-authored JSON, list page with an intro, detail pages at
 
 ### Validation
 
-Content is validated against JSON Schema at build time. Malformed JSON,
-duplicate slugs and inconsistent dates must fail the build, not render blank.
+Hand-authored content (everything except announcements — see above) is
+validated against JSON Schema at build time. Malformed JSON, duplicate slugs
+and inconsistent dates must fail the build, not render blank.
 
 ---
 

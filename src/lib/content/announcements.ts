@@ -1,70 +1,16 @@
-import fs from "node:fs";
-import path from "node:path";
-import Ajv2020, { type ValidateFunction } from "ajv/dist/2020";
-import addFormats from "ajv-formats";
-import schema from "../../../schemas/announcement.schema.json";
 import type { Announcement, LocalizedText } from "@/types/announcement.schema";
 import { resolveLocalized, type ResolvedLocalized } from "@/lib/localized";
 
 export type { Announcement, LocalizedText };
 export type ResolvedLocalizedText = ResolvedLocalized;
 
-const CONTENT_DIR = path.join(process.cwd(), "content", "announcements");
-
-let validator: ValidateFunction<Announcement> | undefined;
-
-function getValidator(): ValidateFunction<Announcement> {
-  if (!validator) {
-    const ajv = new Ajv2020({ allErrors: true });
-    addFormats(ajv);
-    validator = ajv.compile<Announcement>(schema);
-  }
-  return validator;
-}
-
-let cache: Announcement[] | undefined;
-
 /**
- * Loads and validates every announcement in `content/announcements/`, then
- * asserts slug uniqueness across the whole set. Malformed JSON, a schema
- * violation, or a duplicate slug all throw — content problems must fail
- * loudly, not render blank (CLAUDE.md: Content > Validation).
+ * Announcements are no longer hand-authored JSON read from disk — they
+ * come from `useAnnouncements` (src/hooks/useAnnouncements.ts), which calls
+ * the `/api/announcements` endpoint. Everything in this file is pure data
+ * transforms over whatever list that hook returns, so it works the same
+ * regardless of where the data came from.
  */
-function loadAll(): Announcement[] {
-  if (cache) {
-    return cache;
-  }
-
-  const files = fs.readdirSync(CONTENT_DIR).filter((file) => file.endsWith(".json"));
-  const validate = getValidator();
-  const items: Announcement[] = [];
-  const slugToFile = new Map<string, string>();
-
-  for (const file of files) {
-    const filePath = path.join(CONTENT_DIR, file);
-    const parsed: unknown = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
-    if (!validate(parsed)) {
-      const details = (validate.errors ?? [])
-        .map((error) => `${error.instancePath || "/"} ${error.message}`)
-        .join("; ");
-      throw new Error(`${filePath} failed schema validation: ${details}`);
-    }
-
-    const announcement = parsed as Announcement;
-    const existingFile = slugToFile.get(announcement.slug);
-    if (existingFile) {
-      throw new Error(
-        `Duplicate announcement slug "${announcement.slug}" in ${existingFile} and ${file}`,
-      );
-    }
-    slugToFile.set(announcement.slug, file);
-    items.push(announcement);
-  }
-
-  cache = items;
-  return items;
-}
 
 export function isAnnouncementPinned(announcement: Announcement, now: Date): boolean {
   if (!announcement.pinnedUntil) {
@@ -74,12 +20,18 @@ export function isAnnouncementPinned(announcement: Announcement, now: Date): boo
 }
 
 /**
- * Returns every announcement, pinned-and-still-current first, then by
- * `publishDate` descending (CLAUDE.md: Content). `now` is injectable for
- * testability.
+ * Sorts announcements pinned-and-still-current first, then by
+ * `publishDate` descending (CLAUDE.md: Content — "Ordering"). Does not
+ * mutate the input array. `now` is injectable for testability, and this is
+ * the single sort implementation shared by the full `/aktuelles` list and
+ * the homepage teaser (CLAUDE.md absolute rule 7: one source of truth per
+ * fact).
  */
-export function getAnnouncements(now: Date = new Date()): Announcement[] {
-  return [...loadAll()].sort((a, b) => {
+export function sortAnnouncements(
+  announcements: Announcement[],
+  now: Date = new Date(),
+): Announcement[] {
+  return [...announcements].sort((a, b) => {
     const aPinned = isAnnouncementPinned(a, now);
     const bPinned = isAnnouncementPinned(b, now);
     if (aPinned !== bPinned) {

@@ -1,3 +1,5 @@
+"use client";
+
 import { Link } from "@/i18n/navigation";
 import { withNativeNumerals } from "@/lib/date";
 import { CategoryIcon } from "./CategoryIcon";
