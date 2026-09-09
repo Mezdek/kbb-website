@@ -1,0 +1,10 @@
+{
+  "roles": {
+    "vorsitzender1": "1. Vorsitzende/r",
+    "vorsitzender2": "2. Vorsitzende/r",
+    "kassierer": "Kassiererin/Kassierer",
+    "beisitzer1": "Weiteres Vorstandsmitglied",
+    "beisitzer2": "Weiteres Vorstandsmitglied"
+  },
+  "nameWithheld": "Name auf Anfrage beim Vorstand"
+}

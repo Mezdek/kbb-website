@@ -1,0 +1,16 @@
+{
+  "months": {
+    "muharram": "Muharram",
+    "safar": "Safar",
+    "rabi-al-awwal": "Rabi al-Awwal",
+    "rabi-al-thani": "Rabi al-Thani",
+    "jumada-al-awwal": "Jumada al-Awwal",
+    "jumada-al-thani": "Jumada al-Thani",
+    "rajab": "Rajab",
+    "shaban": "Sha'ban",
+    "ramadan": "Ramadan",
+    "shawwal": "Shawwal",
+    "dhu-al-qadah": "Dhu al-Qa'dah",
+    "dhu-al-hijjah": "Dhu al-Hijjah"
+  }
+}

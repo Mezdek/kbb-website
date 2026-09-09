@@ -3,12 +3,12 @@ import { getRequestConfig } from "next-intl/server";
 import { deepMerge, type MessageTree } from "./deepMerge";
 import { routing, type Locale } from "./routing";
 
-import fallbackMessages from "../../messages/en.json";
+import fallbackMessages from "../../messages/en/index";
 
 const messagesByLocale: Record<Locale, () => Promise<{ default: MessageTree }>> = {
-  de: () => import("../../messages/de.json"),
-  ar: () => import("../../messages/ar.json"),
-  en: () => import("../../messages/en.json"),
+  de: () => import("../../messages/de/index"),
+  ar: () => import("../../messages/ar/index"),
+  en: () => import("../../messages/en/index"),
 };
 
 export default getRequestConfig(async ({ requestLocale }) => {

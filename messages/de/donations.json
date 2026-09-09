@@ -1,0 +1,20 @@
+{
+  "title": "Überweisung an den Verein",
+  "intro": "Wir nehmen ausschließlich Banküberweisungen entgegen, ohne Zahlungsdienstleister. Wählen Sie zuerst den Zweck — er bestimmt, was Sie als Verwendungszweck eintragen.",
+  "step1Heading": "Schritt 1 · Zweck wählen",
+  "step2Heading": "Schritt 2 · Überweisen",
+  "recipient": "Empfänger",
+  "iban": "IBAN",
+  "bic": "BIC",
+  "bank": "Bank",
+  "verwendungszweckLabel": "Verwendungszweck — bitte genau so eintragen",
+  "giroCodeInstruction": "Mit der Banking-App scannen — Betrag und Verwendungszweck sind bereits eingetragen.",
+  "selectedLabel": "gewählt",
+  "legalNotice": "Der Verein ist als gemeinnützig anerkannt ({taxOffice}, Steuernummer {taxNumber}). Spendenquittungen stellen wir bis zum 31. Januar des Folgejahres aus — geben Sie dafür bitte Ihren Namen im Verwendungszweck mit an oder schreiben Sie an {email}. (Platzhaltertext, ausstehende steuerliche Prüfung durch Fachleute.)",
+  "purposes": {
+    "general": {
+      "name": "Allgemeine Spende",
+      "description": "Freiwillige Spende für die Arbeit des Vereins und der Moschee."
+    }
+  }
+}

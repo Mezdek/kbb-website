@@ -1,0 +1,36 @@
+{
+  "title": "Datenschutzerklärung",
+  "draftNoticeBold": "ENTWURF — nicht rechtsverbindlich.",
+  "draftNoticeRest": "Dieser Text ist eine Beispielgliederung, kein geprüfter Datenschutztext. Er muss vor Veröffentlichung von einer sachkundigen Person (Rechtsanwalt/Datenschutzbeauftragte/r) geprüft und vervollständigt werden (vgl. CLAUDE.md: „Do not draft legal copy\" für /datenschutz).",
+  "translationNotice": "",
+  "controller": {
+    "heading": "Verantwortlicher",
+    "emailLabel": "E-Mail"
+  },
+  "sections": [
+    {
+      "heading": "Welche Daten wir verarbeiten",
+      "placeholder": "[Platzhalter — je Verarbeitungstätigkeit: Mitgliederverwaltung, Newsletter/Aktuelles, Spendenbescheinigungen, Kontaktformular, Server-Logfiles, etc.]"
+    },
+    {
+      "heading": "Zwecke und Rechtsgrundlagen",
+      "placeholder": "[Platzhalter — Art. 6 Abs. 1 DSGVO je Zweck, insbesondere Vertragserfüllung (Mitgliedschaft), berechtigtes Interesse, Einwilligung.]"
+    },
+    {
+      "heading": "Speicherdauer",
+      "placeholder": "[Platzhalter — je Datenkategorie, inkl. gesetzlicher Aufbewahrungsfristen für Spendenbescheinigungen und Buchhaltungsunterlagen.]"
+    },
+    {
+      "heading": "Weitergabe an Dritte",
+      "placeholder": "[Platzhalter — Hosting-Anbieter, Zahlungsverkehr über Bank, ggf. Steuerberater.]"
+    }
+  ],
+  "rights": {
+    "heading": "Rechte der betroffenen Personen",
+    "text": "Betroffene Personen haben grundsätzlich ein Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch — im Einzelnen abhängig von der jeweiligen Verarbeitung.",
+    "placeholder": "[Platzhalter — Ausformulierung und Beschwerderecht bei der zuständigen Aufsichtsbehörde.]"
+  },
+  "contact": {
+    "heading": "Kontakt in Datenschutzfragen"
+  }
+}

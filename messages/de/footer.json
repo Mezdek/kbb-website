@@ -1,0 +1,23 @@
+{
+  "columns": {
+    "moschee": {
+      "heading": "Moschee",
+      "gebetszeiten": "Gebetszeiten",
+      "freitagsgebet": "Freitagsgebet",
+      "hausordnung": "Hausordnung"
+    },
+    "verein": {
+      "heading": "Verein",
+      "ueberUns": "Über uns",
+      "vorstand": "Vorstand",
+      "mitgliedWerden": "Mitglied werden",
+      "dokumente": "Dokumente"
+    },
+    "legal": {
+      "heading": "Rechtliches",
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz"
+    }
+  },
+  "registryLine": "Vereinsregister {number} · {court}"
+}

@@ -1,0 +1,23 @@
+{
+  "columns": {
+    "moschee": {
+      "heading": "Mosque",
+      "gebetszeiten": "Prayer times",
+      "freitagsgebet": "Friday prayer",
+      "hausordnung": "House rules"
+    },
+    "verein": {
+      "heading": "Association",
+      "ueberUns": "About us",
+      "vorstand": "Board",
+      "mitgliedWerden": "Become a member",
+      "dokumente": "Documents"
+    },
+    "legal": {
+      "heading": "Legal",
+      "impressum": "Legal notice",
+      "datenschutz": "Privacy policy"
+    }
+  },
+  "registryLine": "Register of Associations {number} · {court}"
+}

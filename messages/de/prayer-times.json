@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Moschee · Gebetszeiten",
+  "title": "Gebetszeiten {month} {year}",
+  "methodNote": "Berechnet für Brandenburg an der Havel. Iqama-Zeit jeweils {offset} Minuten nach Adhan, Fadschr {fajrOffset} Minuten.",
+  "fridayKhutbah": "Freitagspredigt {time}",
+  "todayCallout": "Heute · {date}",
+  "nextPrayerLabel": "Nächstes Gebet: {name} {time}",
+  "view": {
+    "gregorian": "Gregorianisch",
+    "hijri": "Hidschri"
+  },
+  "table": {
+    "caption": "Gebetszeiten für {month}",
+    "weekday": "Tag",
+    "date": "Datum",
+    "hijriDate": "Hidschri-Datum",
+    "fajr": "Fadschr",
+    "shuruq": "Schuruq",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Ischa",
+    "today": "Heute",
+    "note": "Alle Zeiten in MESZ. Änderungen werden hier und im Schaukasten bekannt gegeben.",
+    "printA4": "Tabelle drucken (A4)",
+    "switchMonth": "Monat wechseln",
+    "hijriMonthBegins": "{month} beginnt",
+    "gregorianMonthBegins": "{month} beginnt",
+    "missingStart": "Frühere Zeiten für diesen Monat wurden noch nicht hochgeladen.",
+    "missingEnd": "Spätere Zeiten für diesen Monat wurden noch nicht hochgeladen."
+  },
+  "mobile": {
+    "previousDay": "Vorheriger Tag",
+    "nextDay": "Nächster Tag"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "eyebrow": "المسجد · مواقيت الصلاة",
+  "title": "مواقيت الصلاة — {month} {year}",
+  "methodNote": "محسوبة لمدينة براندنبورغ على نهر الهافل. الإقامة بعد الأذان بـ{offset} دقيقة، وللفجر بـ{fajrOffset} دقيقة.",
+  "fridayKhutbah": "خطبة الجمعة {time}",
+  "todayCallout": "اليوم · {date}",
+  "nextPrayerLabel": "الصلاة القادمة: {name} {time}",
+  "view": {
+    "gregorian": "ميلادي",
+    "hijri": "هجري"
+  },
+  "table": {
+    "caption": "مواقيت الصلاة لشهر {month}",
+    "weekday": "اليوم",
+    "date": "التاريخ",
+    "hijriDate": "التاريخ الهجري",
+    "fajr": "الفجر",
+    "shuruq": "الشروق",
+    "dhuhr": "الظهر",
+    "asr": "العصر",
+    "maghrib": "المغرب",
+    "isha": "العشاء",
+    "today": "اليوم",
+    "note": "جميع الأوقات بالتوقيت المحلي، وتُعلن التغييرات هنا وعلى لوحة المسجد.",
+    "printA4": "طباعة الجدول (A4)",
+    "switchMonth": "تغيير الشهر",
+    "hijriMonthBegins": "بداية {month}",
+    "gregorianMonthBegins": "بداية {month}",
+    "missingStart": "لم يتم بعد رفع الأوقات الأولى لهذا الشهر.",
+    "missingEnd": "لم يتم بعد رفع الأوقات الأخيرة لهذا الشهر."
+  },
+  "mobile": {
+    "previousDay": "اليوم السابق",
+    "nextDay": "اليوم التالي"
+  }
+}

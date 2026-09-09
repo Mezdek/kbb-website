@@ -1,0 +1,15 @@
+{
+  "todayLabel": "مواقيت الصلاة اليوم",
+  "nextPrayer": "الصلاة القادمة",
+  "nextPrayerIn": "{name} بعد {duration}",
+  "viewMonthTable": "جدول الشهر",
+  "names": {
+    "fajr": "الفجر",
+    "shuruq": "الشروق",
+    "dhuhr": "الظهر",
+    "asr": "العصر",
+    "maghrib": "المغرب",
+    "isha": "العشاء"
+  },
+  "noTimesUploaded": "لم يتم بعد رفع مواقيت الصلاة لهذه الفترة. يُرجى المراجعة لاحقًا."
+}

@@ -1,0 +1,15 @@
+{
+  "todayLabel": "Prayer times today",
+  "nextPrayer": "Next prayer",
+  "nextPrayerIn": "{name} in {duration}",
+  "viewMonthTable": "View monthly table",
+  "names": {
+    "fajr": "Fajr",
+    "shuruq": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha"
+  },
+  "noTimesUploaded": "No prayer times have been uploaded for this period yet. Please check back soon."
+}

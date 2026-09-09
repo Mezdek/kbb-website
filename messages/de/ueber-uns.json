@@ -1,0 +1,17 @@
+{
+  "title": "Über uns",
+  "intro": "Die {orgName} ist ein eingetragener gemeinnütziger Verein mit Sitz in {city} (Vereinsregister {registryNumber}, {registryCourt}).",
+  "purposeHeading": "Unser Zweck",
+  "purposeIntro": "Wir fördern die internationale Gesinnung, die Toleranz zwischen Kulturen und Religionen sowie die Förderung der Religion. Das setzen wir insbesondere um durch:",
+  "purposeItems": {
+    "mosque": "die Pflege und Praktizierung des islamischen Lebens in der {mosqueName}, insbesondere gemeinschaftliche Gebete, religiöse Feste und religiöse Bildung;",
+    "rest": [
+      "Kurse, Seminare und Vorträge zu Sprachförderung, Bildung und Integration;",
+      "die Begegnung und den Austausch zwischen Menschen unterschiedlicher Herkunft und Kultur;",
+      "die Unterstützung und Begleitung von Geflüchteten und hilfsbedürftigen Personen;",
+      "kulturelle und gemeinschaftliche Veranstaltungen, die der Allgemeinheit offenstehen."
+    ]
+  },
+  "outreach": "Unsere Angebote zur Integration, Bildung und Völkerverständigung stehen allen Menschen offen, unabhängig von Herkunft, Religion oder Weltanschauung.",
+  "contactPrompt": "Fragen zum Verein beantworten wir gerne — siehe <contactLink>Kontakt</contactLink>."
+}

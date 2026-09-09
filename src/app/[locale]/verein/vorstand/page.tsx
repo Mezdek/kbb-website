@@ -7,7 +7,7 @@ import { getSiteConfig } from "@/lib/config";
 /**
  * Roles come from § 14 of the Satzung and are fixed; names are optional and
  * only present where written consent exists (CLAUDE.md: /verein/vorstand).
- * Data is `config.board` — the same source Impressum interpolates from, so
+ * Data is `config.board` — the same source Impressum reads directly, so
  * a name or role change is made once and appears in both places.
  */
 export default async function VorstandPage({ params }: { params: Promise<{ locale: string }> }) {

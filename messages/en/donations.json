@@ -1,0 +1,20 @@
+{
+  "title": "Bank transfer to the association",
+  "intro": "We accept bank transfers only, with no payment provider. Choose the purpose first — it determines what you enter as the payment reference.",
+  "step1Heading": "Step 1 · Choose a purpose",
+  "step2Heading": "Step 2 · Transfer",
+  "recipient": "Recipient",
+  "iban": "IBAN",
+  "bic": "BIC",
+  "bank": "Bank",
+  "verwendungszweckLabel": "Payment reference — please enter exactly as shown",
+  "giroCodeInstruction": "Scan with your banking app — amount and reference are already filled in.",
+  "selectedLabel": "selected",
+  "legalNotice": "The association is recognised as non-profit ({taxOffice}, tax number {taxNumber}). Donation receipts are issued by 31 January of the following year — please include your name in the payment reference, or write to {email}. (Placeholder text pending professional review of the tax wording.)",
+  "purposes": {
+    "general": {
+      "name": "General donation",
+      "description": "Voluntary donation for the work of the association and the mosque."
+    }
+  }
+}

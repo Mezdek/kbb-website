@@ -1,0 +1,10 @@
+{
+  "roles": {
+    "vorsitzender1": "1st Chairperson",
+    "vorsitzender2": "2nd Chairperson",
+    "kassierer": "Treasurer",
+    "beisitzer1": "Additional board member",
+    "beisitzer2": "Additional board member"
+  },
+  "nameWithheld": "Name available on request from the board"
+}

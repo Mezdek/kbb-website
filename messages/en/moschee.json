@@ -1,0 +1,9 @@
+{
+  "eyebrow": "Mosque",
+  "intro": "Prayer times, house rules and the Friday sermon.",
+  "links": {
+    "gebetszeiten": "Prayer times",
+    "hausordnung": "House Rules",
+    "freitagsgebet": "Friday prayer"
+  }
+}

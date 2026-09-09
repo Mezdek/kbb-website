@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Mosque · Prayer times",
+  "title": "Prayer times {month} {year}",
+  "methodNote": "Calculated for Brandenburg an der Havel. Iqama is {offset} minutes after Adhan, {fajrOffset} minutes for Fajr.",
+  "fridayKhutbah": "Friday khutbah {time}",
+  "todayCallout": "Today · {date}",
+  "nextPrayerLabel": "Next prayer: {name} {time}",
+  "view": {
+    "gregorian": "Gregorian",
+    "hijri": "Hijri"
+  },
+  "table": {
+    "caption": "Prayer times for {month}",
+    "weekday": "Day",
+    "date": "Date",
+    "hijriDate": "Hijri date",
+    "fajr": "Fajr",
+    "shuruq": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "today": "Today",
+    "note": "All times CEST. Changes are announced here and on the noticeboard.",
+    "printA4": "Print table (A4)",
+    "switchMonth": "Change month",
+    "hijriMonthBegins": "{month} begins",
+    "gregorianMonthBegins": "{month} begins",
+    "missingStart": "Earlier times for this month have not been uploaded yet.",
+    "missingEnd": "Later times for this month have not been uploaded yet."
+  },
+  "mobile": {
+    "previousDay": "Previous day",
+    "nextDay": "Next day"
+  }
+}

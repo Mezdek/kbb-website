@@ -1,0 +1,23 @@
+{
+  "columns": {
+    "moschee": {
+      "heading": "المسجد",
+      "gebetszeiten": "مواقيت الصلاة",
+      "freitagsgebet": "صلاة الجمعة",
+      "hausordnung": "النظام الداخلي"
+    },
+    "verein": {
+      "heading": "الجمعية",
+      "ueberUns": "من نحن",
+      "vorstand": "مجلس الإدارة",
+      "mitgliedWerden": "العضوية",
+      "dokumente": "الوثائق"
+    },
+    "legal": {
+      "heading": "قانوني",
+      "impressum": "بيان النشر",
+      "datenschutz": "حماية البيانات"
+    }
+  },
+  "registryLine": "سجل الجمعيات {number} · {court}"
+}

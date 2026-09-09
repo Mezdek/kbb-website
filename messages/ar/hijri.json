@@ -1,0 +1,16 @@
+{
+  "months": {
+    "muharram": "محرم",
+    "safar": "صفر",
+    "rabi-al-awwal": "ربيع الأول",
+    "rabi-al-thani": "ربيع الآخر",
+    "jumada-al-awwal": "جمادى الأولى",
+    "jumada-al-thani": "جمادى الآخرة",
+    "rajab": "رجب",
+    "shaban": "شعبان",
+    "ramadan": "رمضان",
+    "shawwal": "شوال",
+    "dhu-al-qadah": "ذو القعدة",
+    "dhu-al-hijjah": "ذو الحجة"
+  }
+}

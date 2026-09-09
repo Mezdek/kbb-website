@@ -132,6 +132,14 @@ Use `createMiddleware(routing)` from `next-intl/middleware`.
 Every page and layout must call `setRequestLocale(locale)` or static generation
 breaks.
 
+**Message files are split by namespace**, not one JSON per locale:
+`messages/<locale>/<namespace>.json`, one file per top-level key, reassembled
+by `messages/<locale>/index.ts` into the object `src/i18n/request.ts` imports.
+File names are kebab-case (`prayer-times.json`), namespace keys stay camelCase
+(`prayerTimes`) to match existing `useTranslations`/`getTranslations` calls.
+Adding a namespace means adding a file and one line in every locale's
+`index.ts` — never a new top-level key hand-inserted into a monolith file.
+
 ---
 
 ## Routes
@@ -283,7 +291,8 @@ calculation in this repository, for any reason.**
 
 Most content is hand-authored and committed to this repo — JSON for
 structured records, Markdown for long-form documents. One author. No admin
-interface, no CMS. **Announcements are the one exception** — see below.
+interface, no CMS. **Announcements, Impressum, Datenschutz, Über uns and
+Mitglied werden are exceptions** — see below.
 
 ### Announcements
 
@@ -350,11 +359,38 @@ not specification:
 Same pattern: hand-authored JSON, list page with an intro, detail pages at
 `/verein/projekte/[slug]`.
 
+### Impressum, Datenschutz, Über uns, Mitglied werden
+
+**Not Markdown files under `content/` anymore.** These four used to be
+`content/<slug>/<lang>.md`, rendered via `renderMarkdown` with `{{placeholder}}`
+values filled in by a template-interpolation step. Both the files and that
+step are gone. The content is now ordinary translated copy:
+
+- `messages/<locale>/{impressum,datenschutz,ueber-uns,mitgliedWerden}.json` —
+  static prose and headings, exactly like any other namespace. Lists (board
+  representation note aside) are `t.raw()` arrays, not `{{}}`-templated
+  Markdown lines.
+- Each page (`src/app/[locale]/impressum`, `/datenschutz`,
+  `/verein/ueber-uns`, `/verein/mitglied-werden`) is real JSX built from
+  `t()`/`t.raw()`/`t.rich()`, wrapped in the shared
+  `LegalDocumentArticle` component for the common `prose-document` shell.
+- Facts that live in `config/site.json` (address, phone, registry, board) are
+  read directly from `getSiteConfig()` inside the component — never
+  duplicated into a message file, never passed through a template. Board
+  representatives render exactly the way `/verein/vorstand` already does
+  (`config.board` + `board.roles.<role>`), not a separate formatted string.
+- Only Datenschutz keeps a `translationNotice` and `draftNoticeBold` /
+  `draftNoticeRest` pair for its "not legally binding" banner — German's
+  `translationNotice` is an empty string on purpose (it's the authoritative
+  language, so nothing renders), not a missing key relying on English
+  fallback to stay silent.
+
 ### Validation
 
-Hand-authored content (everything except announcements — see above) is
-validated against JSON Schema at build time. Malformed JSON, duplicate slugs
-and inconsistent dates must fail the build, not render blank.
+Hand-authored content (everything except announcements, Impressum,
+Datenschutz, Über uns and Mitglied werden — see above) is validated against
+JSON Schema at build time. Malformed JSON, duplicate slugs and inconsistent
+dates must fail the build, not render blank.
 
 ---
 

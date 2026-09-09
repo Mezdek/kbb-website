@@ -1,0 +1,15 @@
+{
+  "todayLabel": "Gebetszeiten heute",
+  "nextPrayer": "Nächstes Gebet",
+  "nextPrayerIn": "{name} in {duration}",
+  "viewMonthTable": "Monatstabelle ansehen",
+  "names": {
+    "fajr": "Fadschr",
+    "shuruq": "Schuruq",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Ischa"
+  },
+  "noTimesUploaded": "Für diesen Zeitraum wurden noch keine Gebetszeiten hochgeladen. Bitte schauen Sie bald wieder vorbei."
+}

@@ -1,0 +1,13 @@
+{
+  "eyebrow": "News",
+  "title": "Announcements",
+  "intro": "Dates, notices and messages from the association. Pinned announcements stay at the top for as long as they apply.",
+  "filterAll": "All",
+  "empty": "Currently no announcement, stay tuned...",
+  "loading": "Loading announcements…",
+  "loadError": "Announcements could not be loaded. Please try again later.",
+  "pinnedBadge": "Pinned",
+  "paginationLabel": "{shown} of {total} announcements",
+  "older": "Older",
+  "newer": "Newer"
+}

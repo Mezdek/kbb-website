@@ -1,0 +1,36 @@
+{
+  "title": "Privacy Policy",
+  "draftNoticeBold": "DRAFT — not legally binding.",
+  "draftNoticeRest": "This is a sample outline, not a reviewed privacy text. It must be checked and completed by a qualified professional (lawyer / data protection officer) before publication (see CLAUDE.md: \"Do not draft legal copy\" for /datenschutz).",
+  "translationNotice": "This is a translation for information only. The German version is the legally binding text.",
+  "controller": {
+    "heading": "Controller",
+    "emailLabel": "Email"
+  },
+  "sections": [
+    {
+      "heading": "What data we process",
+      "placeholder": "[Placeholder — per processing activity: membership administration, announcements/newsletter, donation receipts, contact form, server log files, etc.]"
+    },
+    {
+      "heading": "Purposes and legal bases",
+      "placeholder": "[Placeholder — Art. 6(1) GDPR per purpose, in particular performance of the membership contract, legitimate interest, consent.]"
+    },
+    {
+      "heading": "Retention period",
+      "placeholder": "[Placeholder — per data category, including statutory retention periods for donation receipts and accounting records.]"
+    },
+    {
+      "heading": "Disclosure to third parties",
+      "placeholder": "[Placeholder — hosting provider, bank for payment processing, tax advisor where applicable.]"
+    }
+  ],
+  "rights": {
+    "heading": "Rights of data subjects",
+    "text": "Data subjects generally have a right to access, rectification, erasure, restriction of processing, data portability and objection — the specifics depend on the processing in question.",
+    "placeholder": "[Placeholder — full wording and the right to lodge a complaint with the competent supervisory authority.]"
+  },
+  "contact": {
+    "heading": "Contact for data protection questions"
+  }
+}

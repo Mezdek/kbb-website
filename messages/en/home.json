@@ -1,0 +1,20 @@
+{
+  "heroTitle": "A place for prayer, education and neighbourhood in Brandenburg an der Havel.",
+  "paragraph1": "{orgName} is a registered non-profit association. We run the {mosqueName}, organise lessons for children and adults, and are a point of contact for neighbours, schools and the city.",
+  "paragraph2": "Visitors are welcome. A short heads-up beforehand is enough.",
+  "ctaAbout": "About the association",
+  "ctaVisit": "Request a visit",
+  "aktuelles": {
+    "heading": "News",
+    "all": "All announcements"
+  },
+  "aside": {
+    "fridayHeading": "Friday prayer",
+    "fridayNote": "Khutbah in Arabic, summary in German.",
+    "addressHeading": "Address",
+    "directionsLink": "Directions and public transport",
+    "donateHeading": "Donate",
+    "donateBlurb": "Zakat, Sadaqa and project donations by bank transfer.",
+    "donateCta": "Go to donations"
+  }
+}

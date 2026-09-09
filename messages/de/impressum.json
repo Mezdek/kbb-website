@@ -1,0 +1,30 @@
+{
+  "title": "Impressum",
+  "subtitle": "Angaben gemäß § 5 DDG",
+  "translationNotice": "",
+  "serviceProvider": {
+    "heading": "Diensteanbieter"
+  },
+  "board": {
+    "heading": "Vertretungsberechtigter Vorstand",
+    "note": "Der Verein wird gerichtlich und außergerichtlich durch zwei Mitglieder des Vorstands im Sinne des § 26 BGB gemeinschaftlich vertreten (§ 14 Absatz 2 der Satzung)."
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail"
+  },
+  "registry": {
+    "heading": "Registereintrag",
+    "intro": "Eingetragen im Vereinsregister",
+    "courtLabel": "Registergericht",
+    "numberLabel": "Registernummer"
+  },
+  "responsible": {
+    "heading": "Verantwortlich für den Inhalt nach § 18 Absatz 2 MStV"
+  },
+  "dispute": {
+    "heading": "Verbraucherstreitbeilegung",
+    "text": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+  }
+}

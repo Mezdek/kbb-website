@@ -45,7 +45,9 @@ html[dir="rtl"] body {
   line-height: 1.85;
 }
 
-/* Long-form Markdown documents (Hausordnung, announcement bodies). Tailwind's
+/* Long-form prose documents — Hausordnung and announcement bodies (rendered
+   from Markdown), plus Impressum/Datenschutz/Über uns/Mitglied werden
+   (rendered as structured JSX from translated messages). Tailwind's
    Preflight strips list markers and flattens <hr>, which is right for UI but
    wrong for prose — restored here rather than per component. Logical
    properties throughout so Arabic and Sorani indent from the right. */

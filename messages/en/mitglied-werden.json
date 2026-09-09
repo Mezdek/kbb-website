@@ -1,0 +1,28 @@
+{
+  "title": "Become a member",
+  "intro": "Anyone aged 18 or over who supports the association's purpose may join the {orgName} (§ 4 of the Satzung). Legal entities may be admitted on application.",
+  "process": {
+    "heading": "How it works",
+    "steps": [
+      "Submit an application in text form (letter or email) to the board, with the details needed for membership administration (§ 2 of the Geschäftsordnung).",
+      "The board decides, usually within six weeks. There is no right to admission, and a refusal does not need to be justified.",
+      "On admission, you accept the Satzung and the Geschäftsordnung."
+    ],
+    "applyPrompt": "To apply, write to <email></email>."
+  },
+  "fees": {
+    "heading": "Fees",
+    "intro": "Fees are collected monthly and are due at the start of the month. The following monthly rates apply:",
+    "items": [
+      "Standard fee: €10 — all members without a reduction",
+      "Reduced fee: €5 — pupils, students, recipients of Bürgergeld, and hardship cases",
+      "Fee waived: €0 — members with a disability rating (GdB) of at least 50, honorary members, and special hardship cases"
+    ],
+    "note": "These rates are set out in the Beitragsordnung per Beschluss (board resolution) No. 2026-0003 of 19 July 2026, in effect since 1 October 2026."
+  },
+  "volunteer": {
+    "heading": "Volunteer hours",
+    "text": "Each member contributes 12 hours of volunteer work per financial year, starting with the first full year after admission. Unworked hours may instead be settled with a payment of €5 per hour (§ 4 of the Geschäftsordnung).",
+    "exemptions": "Exemptions include members with a disability rating (GdB) of at least 50, members unable to volunteer due to illness, age or distance, documented hardship cases, and honorary members."
+  }
+}

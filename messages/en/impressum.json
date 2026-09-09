@@ -1,0 +1,30 @@
+{
+  "title": "Legal Notice",
+  "subtitle": "Information pursuant to § 5 DDG (German Digital Services Act)",
+  "translationNotice": "This is a translation for information only. The German version is the legally binding text.",
+  "serviceProvider": {
+    "heading": "Service provider"
+  },
+  "board": {
+    "heading": "Board authorised to represent the association",
+    "note": "The association is represented in and out of court by two members of the board within the meaning of § 26 BGB acting jointly (§ 14 paragraph 2 of the statutes)."
+  },
+  "contact": {
+    "heading": "Contact",
+    "phoneLabel": "Telephone",
+    "emailLabel": "Email"
+  },
+  "registry": {
+    "heading": "Register entry",
+    "intro": "Entered in the register of associations (Vereinsregister)",
+    "courtLabel": "Registering court",
+    "numberLabel": "Registration number"
+  },
+  "responsible": {
+    "heading": "Responsible for content pursuant to § 18 paragraph 2 MStV"
+  },
+  "dispute": {
+    "heading": "Consumer dispute resolution",
+    "text": "We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board."
+  }
+}

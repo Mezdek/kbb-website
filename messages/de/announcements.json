@@ -1,0 +1,13 @@
+{
+  "eyebrow": "Aktuelles",
+  "title": "Ankündigungen",
+  "intro": "Termine, Hinweise und Mitteilungen des Vereins. Angeheftete Ankündigungen stehen oben und bleiben dort, solange sie gelten.",
+  "filterAll": "Alle",
+  "empty": "Derzeit keine Ankündigungen, schauen Sie bald wieder vorbei...",
+  "loading": "Ankündigungen werden geladen…",
+  "loadError": "Ankündigungen konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
+  "pinnedBadge": "Angeheftet",
+  "paginationLabel": "{shown} von {total} Ankündigungen",
+  "older": "Ältere",
+  "newer": "Neuer"
+}
