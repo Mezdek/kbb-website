@@ -171,8 +171,14 @@ yet renders the shared `UnderConstruction` component with its own title passed
 as a prop — one component, never a copied placeholder per page, and never a
 catch-all route, which would swallow genuine 404s.
 
-`/impressum` and `/datenschutz` get placeholder text for now. Do not draft legal
-copy. Note that § 5 DDG requires a real Impressum once the site is public.
+`/impressum` renders from real organisation facts (`config/site.json`) — not
+placeholder text — but has not been published yet; § 5 DDG requires a real Impressum
+once the site is public.
+
+`/datenschutz` renders content compiled from facts the board provided (what data
+is processed, where, on what legal basis, retention periods, processors). The
+association has decided to treat this as final and publish it without a
+separate legal-review sign-off.
 
 ---
 
@@ -379,11 +385,21 @@ step are gone. The content is now ordinary translated copy:
   duplicated into a message file, never passed through a template. Board
   representatives render exactly the way `/verein/vorstand` already does
   (`config.board` + `board.roles.<role>`), not a separate formatted string.
-- Only Datenschutz keeps a `translationNotice` and `draftNoticeBold` /
-  `draftNoticeRest` pair for its "not legally binding" banner — German's
-  `translationNotice` is an empty string on purpose (it's the authoritative
-  language, so nothing renders), not a missing key relying on English
-  fallback to stay silent.
+- Datenschutz keeps a `translationNotice` for German being the authoritative
+  language — an empty string on purpose (nothing renders), not a missing key
+  relying on English fallback to stay silent.
+- **Datenschutz's content is real, not a generic scaffold.** It was compiled from
+  facts the board provided (what data is processed, where, on what legal basis,
+  retention periods, processors) and covers association membership, donations,
+  the school programme, the planned library programme, and planned WhatsApp
+  broadcasts. Its JSON shape is `sections[]` (each `{heading, paragraphs}`, one
+  with `subsections[]` for 4.1–4.5), plus three special blocks: `recipientsTable`
+  (processor overview), `rights`, and `authority` (the LDA Brandenburg complaint
+  contact) — the page renders all four in sequence. There is no draft-notice
+  banner — the association decided to publish this content as final.
+- A parental-consent form for the school/library programmes exists
+  (`Einwilligungserklärung zur Datenverarbeitung`, German only, handed out on
+  paper) — kept alongside this repo, not part of the website itself.
 
 ### Validation
 

@@ -3,22 +3,59 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageShell } from "@/components/PageShell";
 import { LegalDocumentArticle } from "@/components/LegalDocumentArticle";
-import { getSiteConfig } from "@/lib/config";
+
+interface DatenschutzSubsection {
+  heading: string;
+  paragraphs: string[];
+}
 
 interface DatenschutzSection {
   heading: string;
-  placeholder: string;
+  paragraphs: string[];
+  subsections?: DatenschutzSubsection[];
 }
 
+interface RecipientsTable {
+  heading: string;
+  columns: string[];
+  rows: string[][];
+}
+
+interface Rights {
+  heading: string;
+  intro: string;
+  items: string[];
+  outro: string;
+}
+
+interface Authority {
+  heading: string;
+  intro: string;
+  name: string;
+  addressLine1: string;
+  addressLine2: string;
+  phoneLabel: string;
+  phone: string;
+  faxLabel: string;
+  fax: string;
+  emailLabel: string;
+  email: string;
+}
+
+/**
+ * Content compiled from facts the association provided directly (see
+ * CLAUDE.md: Content > Impressum, Datenschutz, Über uns, Mitglied werden).
+ */
 export default async function DatenschutzPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "datenschutz" });
-  const config = getSiteConfig();
-  const { address } = config.org;
 
   const sections = t.raw("sections") as DatenschutzSection[];
+  const recipientsTable = t.raw("recipientsTable") as RecipientsTable;
+  const rights = t.raw("rights") as Rights;
+  const authority = t.raw("authority") as Authority;
   const translationNotice = t("translationNotice");
 
   return (
@@ -26,35 +63,80 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
       <Header locale={locale} />
       <LegalDocumentArticle locale={locale}>
         <h1>{t("title")}</h1>
-        <blockquote className="my-6 border-s-4 border-flair-shade-2 bg-flair/5 py-2 ps-4">
-          <strong>{t("draftNoticeBold")}</strong> {t("draftNoticeRest")}
-        </blockquote>
         {translationNotice && <p className="italic">{translationNotice}</p>}
-
-        <h2>{t("controller.heading")}</h2>
-        <p>
-          {config.org.legalName}
-          <br />
-          {address.street}, {address.postalCode} {address.city}
-          <br />
-          {t("controller.emailLabel")}:{" "}
-          <a href={`mailto:${config.org.contactEmail}`}>{config.org.contactEmail}</a>
-        </p>
 
         {sections.map((section) => (
           <div key={section.heading}>
             <h2>{section.heading}</h2>
-            <p className="italic">{section.placeholder}</p>
+            {section.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="whitespace-pre-line">
+                {paragraph}
+              </p>
+            ))}
+            {section.subsections?.map((subsection) => (
+              <div key={subsection.heading}>
+                <h3>{subsection.heading}</h3>
+                {subsection.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="whitespace-pre-line">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ))}
           </div>
         ))}
 
-        <h2>{t("rights.heading")}</h2>
-        <p>{t("rights.text")}</p>
-        <p className="italic">{t("rights.placeholder")}</p>
+        <h2>{recipientsTable.heading}</h2>
+        <table className="w-full border-collapse text-start text-sm">
+          <thead>
+            <tr>
+              {recipientsTable.columns.map((column) => (
+                <th
+                  key={column}
+                  className="border-b-2 border-primary px-2 py-2 text-start font-medium"
+                >
+                  {column}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {recipientsTable.rows.map((row) => (
+              <tr key={row[0]}>
+                {row.map((cell, index) => (
+                  <td key={`${row[0]}-${index}`} className="border-b border-secondary/40 px-2 py-2">
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-        <h2>{t("contact.heading")}</h2>
+        <h2>{rights.heading}</h2>
+        <p>{rights.intro}</p>
+        <ul>
+          {rights.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p>{rights.outro}</p>
+
+        <h2>{authority.heading}</h2>
+        <p>{authority.intro}</p>
         <p>
-          <a href={`mailto:${config.org.contactEmail}`}>{config.org.contactEmail}</a>
+          {authority.name}
+          <br />
+          {authority.addressLine1}
+          <br />
+          {authority.addressLine2}
+          <br />
+          {authority.phoneLabel}: {authority.phone}
+          <br />
+          {authority.faxLabel}: {authority.fax}
+          <br />
+          {authority.emailLabel}:{" "}
+          <a href={`mailto:${authority.email}`}>{authority.email}</a>
         </p>
       </LegalDocumentArticle>
       <Footer />

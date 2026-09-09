@@ -1,5 +1,15 @@
 import type { ReactNode } from "react";
 
+/**
+ * The shared `<article>` shell for Impressum, Datenschutz, Über uns and
+ * Mitglied werden — identical wrapper, styling and `prose-document` tag
+ * rules (`globals.css`) across all four, only the content inside differs.
+ * Unlike the old Markdown-sourced documents, these render from the active
+ * locale's own messages, so `lang`/`dir` simply follow the page locale —
+ * the same way every other translated page does — rather than needing a
+ * separately-resolved "content language" (CLAUDE.md: /impressum,
+ * /datenschutz, /verein/ueber-uns, /verein/mitglied-werden).
+ */
 export function LegalDocumentArticle({
   locale,
   children,

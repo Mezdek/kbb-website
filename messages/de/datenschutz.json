@@ -1,36 +1,163 @@
 {
   "title": "Datenschutzerklärung",
-  "draftNoticeBold": "ENTWURF — nicht rechtsverbindlich.",
-  "draftNoticeRest": "Dieser Text ist eine Beispielgliederung, kein geprüfter Datenschutztext. Er muss vor Veröffentlichung von einer sachkundigen Person (Rechtsanwalt/Datenschutzbeauftragte/r) geprüft und vervollständigt werden (vgl. CLAUDE.md: „Do not draft legal copy\" für /datenschutz).",
   "translationNotice": "",
-  "controller": {
-    "heading": "Verantwortlicher",
-    "emailLabel": "E-Mail"
-  },
   "sections": [
     {
-      "heading": "Welche Daten wir verarbeiten",
-      "placeholder": "[Platzhalter — je Verarbeitungstätigkeit: Mitgliederverwaltung, Newsletter/Aktuelles, Spendenbescheinigungen, Kontaktformular, Server-Logfiles, etc.]"
+      "heading": "1. Verantwortlicher",
+      "paragraphs": [
+        "Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:",
+        "Kulturbrücke Brandenburg e.V.\nMittelstraße 11\n14776 Brandenburg an der Havel",
+        "Telefon: 01764 1743900\nE-Mail: kontakt@kulturbruecke-brandenburg.de",
+        "Vertreten durch den Vorstand."
+      ]
     },
     {
-      "heading": "Zwecke und Rechtsgrundlagen",
-      "placeholder": "[Platzhalter — Art. 6 Abs. 1 DSGVO je Zweck, insbesondere Vertragserfüllung (Mitgliedschaft), berechtigtes Interesse, Einwilligung.]"
+      "heading": "2. Datenverarbeitung beim Besuch der Website",
+      "paragraphs": [
+        "Beim Aufruf dieser Website erhebt unser Hosting-Anbieter netcup GmbH automatisiert die technisch notwendigen Server-Logdaten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, verwendeter Browser). Es werden keine darüberhinausgehenden Daten erhoben und keine Cookies eingesetzt.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem funktionierenden, sicheren Webangebot).",
+        "Empfänger: netcup GmbH als Auftragsverarbeiter (Hosting).",
+        "Speicherdauer: entsprechend der Standard-Logdatenspeicherung von netcup; danach automatische Löschung."
+      ]
     },
     {
-      "heading": "Speicherdauer",
-      "placeholder": "[Platzhalter — je Datenkategorie, inkl. gesetzlicher Aufbewahrungsfristen für Spendenbescheinigungen und Buchhaltungsunterlagen.]"
+      "heading": "2a. Kontaktaufnahme per E-Mail",
+      "paragraphs": [
+        "Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre E-Mail-Adresse, Ihren Namen (sofern angegeben) und den Inhalt Ihrer Nachricht, um Ihre Anfrage zu beantworten. Zugriff auf dieses Postfach hat der Vorstand.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen) bzw. Art. 6 Abs. 1 lit. b DSGVO, soweit sich die Anfrage auf ein bestehendes oder angebahntes Vertragsverhältnis bezieht.",
+        "Speicherdauer: Die Nachricht wird gelöscht, sobald die Anfrage abschließend bearbeitet ist, soweit keine weitere Aufbewahrungspflicht besteht (z. B. bei Bezug zu einem Mitgliedschafts- oder Buchhaltungsvorgang)."
+      ]
     },
     {
-      "heading": "Weitergabe an Dritte",
-      "placeholder": "[Platzhalter — Hosting-Anbieter, Zahlungsverkehr über Bank, ggf. Steuerberater.]"
+      "heading": "2b. Newsletter",
+      "paragraphs": [
+        "Wenn Sie unseren Newsletter abonnieren möchten, benötigen wir Ihre E-Mail-Adresse. Der Versand erfolgt erst, nachdem Sie Ihre Anmeldung über einen Bestätigungslink in einer an Sie gesendeten E-Mail bestätigt haben (Double-Opt-In-Verfahren).",
+        "Sie können das Abonnement jederzeit mit Wirkung für die Zukunft über einen Abmeldelink beenden, der in jeder Newsletter-Ausgabe enthalten ist.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).",
+        "Speicherdauer: Ihre E-Mail-Adresse wird für die Dauer des Abonnements gespeichert und nach einer Abmeldung gelöscht."
+      ]
+    },
+    {
+      "heading": "3. Vereinsmitgliedschaft",
+      "paragraphs": [],
+      "subsections": [
+        {
+          "heading": "3.1 Welche Daten wir verarbeiten",
+          "paragraphs": [
+            "Im Rahmen der Mitgliederverwaltung verarbeiten wir von unseren Mitgliedern Name und Anschrift, Geburtsdatum, Geschlecht, Familienstand, Telefonnummer(n) und E-Mail-Adresse(n), die Bankverbindung (IBAN) zum Zweck des SEPA-Lastschrifteinzugs sowie weitere Mitgliedschaftsdaten wie Eintrittsdatum, ggf. Austrittsdatum und geleistete ehrenamtliche Stunden."
+          ]
+        },
+        {
+          "heading": "3.2 Zwecke und Rechtsgrundlagen",
+          "paragraphs": [
+            "Die Verarbeitung erfolgt zur Begründung, Durchführung und Verwaltung der Vereinsmitgliedschaft (u. a. Beitragseinzug, Kommunikation mit Mitgliedern, Nachweis der ehrenamtlichen Mitarbeit gemäß der Geschäftsordnung).",
+            "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des mitgliedschaftlichen Vertragsverhältnisses) sowie Art. 6 Abs. 1 lit. c DSGVO, soweit die Verarbeitung zur Erfüllung handels- und steuerrechtlicher Aufbewahrungspflichten erforderlich ist."
+          ]
+        },
+        {
+          "heading": "3.3 Wo diese Daten gespeichert werden",
+          "paragraphs": [
+            "Die Mitgliederdaten werden in der Vereinsverwaltungssoftware WISO MeinVerein (Buhl Data Service GmbH) sowie ergänzend in Papierform in den Vereinsräumen geführt. Mit der Buhl Data Service GmbH besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Die Papierunterlagen sind vor dem Zugriff Unbefugter geschützt und nur berechtigten Vorstandsmitgliedern zugänglich."
+          ]
+        },
+        {
+          "heading": "3.4 Beitragseinzug per SEPA-Lastschrift",
+          "paragraphs": [
+            "Zur Erhebung des Mitgliedsbeitrags wird ein SEPA-Lastschriftmandat eingeholt und die zugehörige Bankverbindung genutzt. Das Mandat und die damit verbundenen Buchungsbelege werden als zahlungsbezogene Unterlagen entsprechend den handels- und steuerrechtlichen Fristen aufbewahrt (siehe 3.5)."
+          ]
+        },
+        {
+          "heading": "3.5 Speicherdauer",
+          "paragraphs": [
+            "Allgemeine Mitgliederdaten, die nicht zugleich Buchungsbeleg sind, werden nach Beendigung der Mitgliedschaft zeitnah gelöscht bzw. vernichtet, soweit keine weitere gesetzliche Aufbewahrungspflicht besteht. Zahlungsbezogene Unterlagen (SEPA-Mandat, Beitragsbuchungen, Zuwendungsbestätigungen) werden 10 Jahre aufbewahrt (§ 147 AO, § 257 HGB)."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "4. Spenden und Zuwendungsbestätigungen",
+      "paragraphs": [
+        "Spenden können per Banküberweisung anhand des auf der Website angegebenen Verwendungszwecks oder bar erfolgen; in beiden Fällen erhalten wir zunächst keine Daten von Spenderinnen und Spendern.",
+        "Wird eine Zuwendungsbestätigung (Spendenquittung) angefordert, erheben wir ausschließlich die dafür notwendigen Angaben (in der Regel Name und Anschrift) und verarbeiten diese in WISO MeinVerein.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. c DSGVO (steuerrechtliche Pflicht zur Ausstellung einer ordnungsgemäßen Zuwendungsbestätigung).",
+        "Speicherdauer: 10 Jahre als Buchungsbeleg (§ 147 AO, § 257 HGB)."
+      ]
+    },
+    {
+      "heading": "5. Schulprogramm",
+      "paragraphs": [
+        "Im Rahmen unseres Schulprogramms verarbeiten wir für die teilnehmenden Kinder vergleichbare Stammdaten wie bei Vereinsmitgliedern (Name, Kontaktdaten der Erziehungsberechtigten u. Ä.), ergänzt um die im Rahmen des Unterrichts selbst entstehenden Informationen (z. B. Anwesenheit, Lernfortschritt). Diese Daten werden ausschließlich in Papierform bzw. auf einem Bürocomputer vor Ort geführt, nicht online gespeichert oder verarbeitet.",
+        "Da die Teilnehmenden minderjährig sind, erfolgt die Anmeldung durch die Erziehungsberechtigten, die zugleich in die Datenverarbeitung einwilligen bzw. den mitgliedschafts-/programmbezogenen Vertrag für das Kind abschließen.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO in Verbindung mit der Einwilligung bzw. Vertretung durch die Erziehungsberechtigten; hilfsweise Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).",
+        "Die Einwilligung wird über eine gesonderte Einwilligungserklärung eingeholt, die bei Anmeldung ausgehändigt wird.",
+        "Speicherdauer: für die Dauer der Teilnahme, danach Löschung/Vernichtung nach einer kurzen Nachlauffrist, soweit keine Unterlagen zugleich Buchungsbeleg sind."
+      ]
+    },
+    {
+      "heading": "6. Bibliotheksprogramm",
+      "paragraphs": [
+        "Wer ein Buch reservieren möchte, kann dies auch ohne Mitgliedschaft als Gast tun. Dafür werden Name, Anschrift, Geburtsdatum, E-Mail-Adresse und Telefonnummer erhoben, um die Reservierung und Ausleihe abzuwickeln.",
+        "Die Daten einer Gast-Reservierung werden spätestens 30 Tage nach Rückgabe des Buches gelöscht. Ist mit der Ausleihe eine Zahlung verbunden (z. B. eine Gebühr bei Beschädigung oder Verlust), wird der zugehörige Buchungsbeleg wie unter 3.5 beschrieben 10 Jahre aufbewahrt.",
+        "Wer die eigenen Daten über eine einzelne Ausleihe hinaus hinterlegen möchte, kann sich als Bibliotheksmitglied registrieren; die Daten werden dann für die Dauer der Mitgliedschaft gespeichert. Das Konto kann jederzeit gelöscht werden, sofern zu diesem Zeitpunkt keine Bücher entliehen sind.",
+        "Sind Teilnehmende minderjährig, gilt Abschnitt 5 zur Einwilligung der Erziehungsberechtigten entsprechend.",
+        "Die Daten werden in einer lokalen Datenbank geführt.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Erfüllung der Reservierung bzw. Mitgliedschaft) bzw. Einwilligung oder Vertretung durch die Erziehungsberechtigten bei Minderjährigen.",
+        "Die Einwilligung wird über eine gesonderte Einwilligungserklärung eingeholt, die bei Anmeldung ausgehändigt wird."
+      ]
+    },
+    {
+      "heading": "7. Kontaktaufnahme über WhatsApp",
+      "paragraphs": [
+        "Der Verein ist zusätzlich über eine WhatsApp-Nummer erreichbar. Nutzen Sie diese Möglichkeit freiwillig zur Kontaktaufnahme, gelten ergänzend die Datenschutzbestimmungen von WhatsApp (WhatsApp Ireland Limited); auf die Verarbeitung Ihrer Daten durch WhatsApp selbst haben wir keinen Einfluss.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem niedrigschwelligen Kontaktweg) bzw. Ihre Einwilligung durch die freiwillige Kontaktaufnahme."
+      ]
     }
   ],
-  "rights": {
-    "heading": "Rechte der betroffenen Personen",
-    "text": "Betroffene Personen haben grundsätzlich ein Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch — im Einzelnen abhängig von der jeweiligen Verarbeitung.",
-    "placeholder": "[Platzhalter — Ausformulierung und Beschwerderecht bei der zuständigen Aufsichtsbehörde.]"
+  "recipientsTable": {
+    "heading": "8. Empfänger und Auftragsverarbeiter im Überblick",
+    "columns": [
+      "Dienstleister",
+      "Zweck",
+      "Auftragsverarbeitungsvertrag"
+    ],
+    "rows": [
+      [
+        "Buhl Data Service GmbH (WISO MeinVerein)",
+        "Mitgliederverwaltung, Buchhaltung",
+        "vorhanden"
+      ],
+      [
+        "netcup GmbH",
+        "Website-Hosting",
+        "vorhanden"
+      ]
+    ]
   },
-  "contact": {
-    "heading": "Kontakt in Datenschutzfragen"
+  "rights": {
+    "heading": "9. Rechte der betroffenen Personen",
+    "intro": "Betroffene Personen haben nach der DSGVO das Recht auf:",
+    "items": [
+      "Auskunft über die zu ihrer Person gespeicherten Daten (Art. 15 DSGVO)",
+      "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+      "Löschung ihrer Daten, soweit keine gesetzliche Aufbewahrungspflicht entgegensteht (Art. 17 DSGVO)",
+      "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+      "Datenübertragbarkeit (Art. 20 DSGVO)",
+      "Widerspruch gegen die Verarbeitung, soweit diese auf Art. 6 Abs. 1 lit. f DSGVO beruht (Art. 21 DSGVO)",
+      "Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)"
+    ],
+    "outro": "Zur Ausübung dieser Rechte genügt eine formlose Mitteilung an die in Abschnitt 1 genannten Kontaktdaten."
+  },
+  "authority": {
+    "heading": "10. Beschwerderecht bei der Aufsichtsbehörde",
+    "intro": "Betroffene Personen haben unabhängig davon das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist:",
+    "name": "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg",
+    "addressLine1": "Stahnsdorfer Damm 77",
+    "addressLine2": "14532 Kleinmachnow",
+    "phoneLabel": "Telefon",
+    "phone": "033203 356-0",
+    "faxLabel": "Telefax",
+    "fax": "033203 356-49",
+    "emailLabel": "E-Mail",
+    "email": "poststelle@lda.brandenburg.de"
   }
 }

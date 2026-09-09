@@ -33,10 +33,10 @@ describe("deepMerge", () => {
     expect(base).toEqual(baseSnapshot);
     expect(override).toEqual(overrideSnapshot);
   });
-});
 
-it("replaces an array wholesale rather than merging it element by element", () => {
-  const base = { items: ["a", "b", "c"] };
-  const override = { items: ["x"] };
-  expect(deepMerge(base, override)).toEqual({ items: ["x"] });
+  it("replaces an array wholesale rather than merging it element by element", () => {
+    const base = { items: ["a", "b", "c"] };
+    const override = { items: ["x"] };
+    expect(deepMerge(base, override)).toEqual({ items: ["x"] });
+  });
 });

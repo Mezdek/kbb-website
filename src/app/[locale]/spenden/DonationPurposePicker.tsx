@@ -138,7 +138,7 @@ export function DonationPurposePicker({
             {labels.step2Heading}
           </div>
           <div>
-            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
               {labels.recipient}
             </div>
             <div className="flex items-center gap-2">
@@ -152,7 +152,7 @@ export function DonationPurposePicker({
             </div>
           </div>
           <div>
-            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
               {labels.iban}
             </div>
             <div className="flex items-center gap-2">
@@ -169,7 +169,7 @@ export function DonationPurposePicker({
           </div>
           <div className="flex flex-wrap gap-8 md:gap-10">
             <div>
-              <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
+              <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
                 {labels.bic}
               </div>
               <div className="flex items-center gap-2">
@@ -183,7 +183,7 @@ export function DonationPurposePicker({
               </div>
             </div>
             <div>
-              <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
+              <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
                 {labels.bank}
               </div>
               <div className="flex items-center gap-2">
@@ -198,7 +198,7 @@ export function DonationPurposePicker({
             </div>
           </div>
           <div className="border-s-[3px] border-flair-shade-2 px-4 py-3.5">
-            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
               {labels.verwendungszweckLabel}
             </div>
             <div className="flex items-center gap-2">
@@ -214,7 +214,7 @@ export function DonationPurposePicker({
         </div>
         <div className="flex flex-col items-center gap-3.5 bg-secondary/13 px-6 py-7 text-center md:rtl:order-1">
           <div
-            className="h-42.5 w-42.5 shrink-0"
+            className="h-[170px] w-[170px] shrink-0"
             role="img"
             aria-label="GiroCode"
             dangerouslySetInnerHTML={{ __html: qrSvg }}

@@ -1,36 +1,163 @@
 {
   "title": "Privacy Policy",
-  "draftNoticeBold": "DRAFT — not legally binding.",
-  "draftNoticeRest": "This is a sample outline, not a reviewed privacy text. It must be checked and completed by a qualified professional (lawyer / data protection officer) before publication (see CLAUDE.md: \"Do not draft legal copy\" for /datenschutz).",
   "translationNotice": "This is a translation for information only. The German version is the legally binding text.",
-  "controller": {
-    "heading": "Controller",
-    "emailLabel": "Email"
-  },
   "sections": [
     {
-      "heading": "What data we process",
-      "placeholder": "[Placeholder — per processing activity: membership administration, announcements/newsletter, donation receipts, contact form, server log files, etc.]"
+      "heading": "1. Controller",
+      "paragraphs": [
+        "The controller within the meaning of the General Data Protection Regulation (GDPR) is:",
+        "Kulturbrücke Brandenburg e.V.\nMittelstraße 11\n14776 Brandenburg an der Havel, Germany",
+        "Phone: +49 1764 1743900\nEmail: kontakt@kulturbruecke-brandenburg.de",
+        "Represented by the board (Vorstand)."
+      ]
     },
     {
-      "heading": "Purposes and legal bases",
-      "placeholder": "[Placeholder — Art. 6(1) GDPR per purpose, in particular performance of the membership contract, legitimate interest, consent.]"
+      "heading": "2. Data processing when visiting the website",
+      "paragraphs": [
+        "When this website is accessed, our hosting provider netcup GmbH automatically collects the technically necessary server log data (e.g. IP address, date and time of access, page requested, browser used). No further data is collected and no cookies are used.",
+        "Legal basis: Art. 6(1)(f) GDPR (legitimate interest in a functioning, secure website).",
+        "Recipient: netcup GmbH as processor (hosting).",
+        "Retention period: per netcup's standard log retention; deleted automatically thereafter."
+      ]
     },
     {
-      "heading": "Retention period",
-      "placeholder": "[Placeholder — per data category, including statutory retention periods for donation receipts and accounting records.]"
+      "heading": "2a. Contacting us by email",
+      "paragraphs": [
+        "If you contact us by email, we process your email address, your name (if given), and the content of your message in order to answer your enquiry. The board has access to this inbox.",
+        "Legal basis: Art. 6(1)(f) GDPR (legitimate interest in responding to enquiries), or Art. 6(1)(b) GDPR where the enquiry relates to an existing or prospective contractual relationship.",
+        "Retention period: the message is deleted once the enquiry has been fully dealt with, unless a further retention obligation applies (e.g. where it relates to a membership or accounting matter)."
+      ]
     },
     {
-      "heading": "Disclosure to third parties",
-      "placeholder": "[Placeholder — hosting provider, bank for payment processing, tax advisor where applicable.]"
+      "heading": "2b. Newsletter",
+      "paragraphs": [
+        "If you would like to subscribe to our newsletter, we need your email address. Newsletters are only sent once you have confirmed your subscription via a confirmation link in an email sent to you (double opt-in).",
+        "You can end your subscription at any time, with effect for the future, via an unsubscribe link included in every newsletter issue.",
+        "Legal basis: Art. 6(1)(a) GDPR (consent).",
+        "Retention period: your email address is stored for the duration of the subscription and deleted once you unsubscribe."
+      ]
+    },
+    {
+      "heading": "3. Association membership",
+      "paragraphs": [],
+      "subsections": [
+        {
+          "heading": "3.1 What data we process",
+          "paragraphs": [
+            "As part of membership administration, we process our members' name and address, date of birth, gender, marital status, phone number(s) and email address(es), bank details (IBAN) for the purpose of SEPA direct debit collection, and further membership data such as the date of joining, date of leaving (if applicable), and volunteer hours completed."
+          ]
+        },
+        {
+          "heading": "3.2 Purposes and legal bases",
+          "paragraphs": [
+            "This processing establishes, administers and maintains the membership relationship (including fee collection, communication with members, and recording volunteer work under the association's Geschäftsordnung).",
+            "Legal basis: Art. 6(1)(b) GDPR (performance of the membership contract), and Art. 6(1)(c) GDPR where processing is necessary to comply with commercial and tax record-keeping obligations."
+          ]
+        },
+        {
+          "heading": "3.3 Where this data is stored",
+          "paragraphs": [
+            "Membership data is kept in the association-management software WISO MeinVerein (Buhl Data Service GmbH) and, in addition, on paper at the association's premises. A data processing agreement under Art. 28 GDPR is in place with Buhl Data Service GmbH. The paper records are protected against unauthorised access and only accessible to authorised board members."
+          ]
+        },
+        {
+          "heading": "3.4 Fee collection by SEPA direct debit",
+          "paragraphs": [
+            "A SEPA direct debit mandate is obtained to collect membership fees, using the associated bank details. The mandate and the resulting accounting records are kept as payment-related documents in line with the applicable commercial and tax retention periods (see 3.5)."
+          ]
+        },
+        {
+          "heading": "3.5 Retention period",
+          "paragraphs": [
+            "General membership data that is not itself an accounting record is deleted or destroyed promptly after membership ends, unless a further statutory retention obligation applies. Payment-related records (SEPA mandate, fee bookings, donation receipts) are kept for 10 years (§ 147 AO, § 257 HGB)."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "4. Donations and tax receipts",
+      "paragraphs": [
+        "Donations can be made by bank transfer, using the reference (Verwendungszweck) shown on the website, or in cash; in either case, we initially receive no data about the donor.",
+        "If a Zuwendungsbestätigung (tax-deductible donation receipt) is requested, we collect only the information necessary for that (typically name and address) and process it in WISO MeinVerein.",
+        "Legal basis: Art. 6(1)(c) GDPR (statutory obligation to issue a valid donation receipt).",
+        "Retention period: 10 years as an accounting record (§ 147 AO, § 257 HGB)."
+      ]
+    },
+    {
+      "heading": "5. School programme",
+      "paragraphs": [
+        "As part of our school programme, we process membership-like core data for participating children (name, parents'/guardians' contact details, etc.), supplemented by information generated by the classes themselves (e.g. attendance, learning progress). This data is kept exclusively on paper and on an office computer on site, never stored or processed online.",
+        "As participants are minors, enrolment is carried out by the parents or legal guardians, who at the same time consent to the data processing and/or enter into the membership/programme arrangement on the child's behalf.",
+        "Legal basis: Art. 6(1)(b) GDPR in conjunction with the consent or representation of the parents/guardians; alternatively Art. 6(1)(a) GDPR (consent).",
+        "Consent is obtained via a separate consent form, provided at enrolment.",
+        "Retention period: for the duration of participation, then deleted/destroyed after a short follow-up period, unless a record is also an accounting document."
+      ]
+    },
+    {
+      "heading": "6. Library programme",
+      "paragraphs": [
+        "Anyone wishing to reserve a book can do so as a guest, without becoming a member. This requires name, address, date of birth, email address and phone number, in order to process the reservation and loan.",
+        "Guest reservation data is deleted no later than 30 days after the book is returned. If the loan involves a payment (e.g. a fee for damage or loss), the related accounting record is kept for 10 years, as described under 3.5.",
+        "Anyone who wants their details kept beyond a single loan can register as a library member; that data is then stored for the duration of the membership. The account can be deleted at any time, provided no books are checked out at that time.",
+        "Where participants are minors, section 5 on parental/guardian consent applies accordingly.",
+        "The data is kept in a local database.",
+        "Legal basis: Art. 6(1)(b) GDPR (fulfilling the reservation or membership), or consent/representation by parents or guardians for minors.",
+        "Consent is obtained via a separate consent form, provided at enrolment."
+      ]
+    },
+    {
+      "heading": "7. Contacting us via WhatsApp",
+      "paragraphs": [
+        "The association can also be reached via a WhatsApp number. If you choose to use this to contact us, WhatsApp's own privacy terms (WhatsApp Ireland Limited) additionally apply; we have no influence over WhatsApp's own processing of your data.",
+        "Legal basis: Art. 6(1)(f) GDPR (legitimate interest in offering a low-threshold way to get in touch), or your consent through voluntarily initiating contact."
+      ]
     }
   ],
-  "rights": {
-    "heading": "Rights of data subjects",
-    "text": "Data subjects generally have a right to access, rectification, erasure, restriction of processing, data portability and objection — the specifics depend on the processing in question.",
-    "placeholder": "[Placeholder — full wording and the right to lodge a complaint with the competent supervisory authority.]"
+  "recipientsTable": {
+    "heading": "8. Recipients and processors at a glance",
+    "columns": [
+      "Service provider",
+      "Purpose",
+      "Data processing agreement"
+    ],
+    "rows": [
+      [
+        "Buhl Data Service GmbH (WISO MeinVerein)",
+        "Membership administration, accounting",
+        "in place"
+      ],
+      [
+        "netcup GmbH",
+        "Website hosting",
+        "in place"
+      ]
+    ]
   },
-  "contact": {
-    "heading": "Contact for data protection questions"
+  "rights": {
+    "heading": "9. Rights of data subjects",
+    "intro": "Under the GDPR, data subjects have the right to:",
+    "items": [
+      "access the data stored about them (Art. 15 GDPR)",
+      "rectification of inaccurate data (Art. 16 GDPR)",
+      "erasure of their data, unless a statutory retention obligation applies (Art. 17 GDPR)",
+      "restriction of processing (Art. 18 GDPR)",
+      "data portability (Art. 20 GDPR)",
+      "object to processing based on Art. 6(1)(f) GDPR (Art. 21 GDPR)",
+      "withdraw any consent given, with effect for the future (Art. 7(3) GDPR)"
+    ],
+    "outro": "An informal message to the contact details in section 1 is sufficient to exercise these rights."
+  },
+  "authority": {
+    "heading": "10. Right to lodge a complaint with the supervisory authority",
+    "intro": "Data subjects also have the right to lodge a complaint with a data protection supervisory authority. The competent authority is:",
+    "name": "Die Landesbeauftragte für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg (State Commissioner for Data Protection and Access to Information, Brandenburg)",
+    "addressLine1": "Stahnsdorfer Damm 77",
+    "addressLine2": "14532 Kleinmachnow, Germany",
+    "phoneLabel": "Phone",
+    "phone": "+49 33203 356-0",
+    "faxLabel": "Fax",
+    "fax": "+49 33203 356-49",
+    "emailLabel": "Email",
+    "email": "poststelle@lda.brandenburg.de"
   }
 }
