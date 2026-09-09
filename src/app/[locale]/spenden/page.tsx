@@ -11,6 +11,7 @@ export default async function SpendenPage({ params }: { params: Promise<{ locale
 
   const t = await getTranslations("donations");
   const tNav = await getTranslations("nav");
+  const tCommon = await getTranslations("common");
   const config = getSiteConfig();
   const year = new Date().getFullYear();
 
@@ -50,6 +51,8 @@ export default async function SpendenPage({ params }: { params: Promise<{ locale
             verwendungszweckLabel: t("verwendungszweckLabel"),
             giroCodeInstruction: t("giroCodeInstruction"),
             selectedLabel: t("selectedLabel"),
+            copy: tCommon("copy"),
+            copied: tCommon("copied"),
           }}
         />
       </div>

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { buildEpcPayload } from "@/lib/donations/epcQr";
 import { renderQrSvgMarkup } from "@/lib/donations/qrSvg";
 import { Ltr } from "@/components/Ltr";
+import { CopyButton } from "@/components/CopyButton";
 
 export interface DonationPurpose {
   id: string;
@@ -29,6 +30,8 @@ export interface DonationLabels {
   verwendungszweckLabel: string;
   giroCodeInstruction: string;
   selectedLabel: string;
+  copy: string;
+  copied: string;
 }
 
 function formatIban(iban: string): string {
@@ -135,43 +138,83 @@ export function DonationPurposePicker({
             {labels.step2Heading}
           </div>
           <div>
-            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
               {labels.recipient}
             </div>
-            <Ltr className="block text-lg text-text-body">{recipientName}</Ltr>
+            <div className="flex items-center gap-2">
+              <Ltr className="block text-lg text-text-body">{recipientName}</Ltr>
+              <CopyButton
+                value={recipientName}
+                fieldLabel={labels.recipient}
+                copyLabel={labels.copy}
+                copiedLabel={labels.copied}
+              />
+            </div>
           </div>
           <div>
-            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
               {labels.iban}
             </div>
-            <Ltr className="block text-[22px] tracking-[0.04em] text-primary">
-              {formatIban(bank.iban)}
-            </Ltr>
+            <div className="flex items-center gap-2">
+              <Ltr className="block text-[22px] tracking-[0.04em] text-primary">
+                {formatIban(bank.iban)}
+              </Ltr>
+              <CopyButton
+                value={bank.iban.replace(/\s+/g, "")}
+                fieldLabel={labels.iban}
+                copyLabel={labels.copy}
+                copiedLabel={labels.copied}
+              />
+            </div>
           </div>
           <div className="flex flex-wrap gap-8 md:gap-10">
             <div>
-              <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
+              <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
                 {labels.bic}
               </div>
-              <Ltr className="block text-lg text-text-body">{bank.bic}</Ltr>
+              <div className="flex items-center gap-2">
+                <Ltr className="block text-lg text-text-body">{bank.bic}</Ltr>
+                <CopyButton
+                  value={bank.bic}
+                  fieldLabel={labels.bic}
+                  copyLabel={labels.copy}
+                  copiedLabel={labels.copied}
+                />
+              </div>
             </div>
             <div>
-              <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
+              <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
                 {labels.bank}
               </div>
-              <Ltr className="block text-lg text-text-body">{bank.bankName}</Ltr>
+              <div className="flex items-center gap-2">
+                <Ltr className="block text-lg text-text-body">{bank.bankName}</Ltr>
+                <CopyButton
+                  value={bank.bankName}
+                  fieldLabel={labels.bank}
+                  copyLabel={labels.copy}
+                  copiedLabel={labels.copied}
+                />
+              </div>
             </div>
           </div>
           <div className="border-s-[3px] border-flair-shade-2 px-4 py-3.5">
-            <div className="mb-1 text-xs uppercase tracking-[0.1em] text-text-secondary">
+            <div className="mb-1 text-xs uppercase tracking-widest text-text-secondary">
               {labels.verwendungszweckLabel}
             </div>
-            <Ltr className="block text-xl text-flair-shade-2">{selected.verwendungszweck}</Ltr>
+            <div className="flex items-center gap-2">
+              <Ltr className="block text-xl text-flair-shade-2">{selected.verwendungszweck}</Ltr>
+              <CopyButton
+                value={selected.verwendungszweck}
+                fieldLabel={labels.verwendungszweckLabel}
+                copyLabel={labels.copy}
+                copiedLabel={labels.copied}
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center gap-3.5 bg-secondary/13 px-6 py-7 text-center md:rtl:order-1">
           <div
-            className="h-[170px] w-[170px] shrink-0"
+            className="h-42.5 w-42.5 shrink-0"
             role="img"
             aria-label="GiroCode"
             dangerouslySetInnerHTML={{ __html: qrSvg }}

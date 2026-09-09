@@ -68,7 +68,7 @@ export function LanguageSwitcher() {
       {open && (
         <div
           id={popupId}
-          className="absolute end-0 top-full z-20 mt-1 min-w-[9rem] border border-secondary/60 bg-secondary-shade-2"
+          className="absolute inset-e-0 top-full z-20 mt-1 min-w-36 border border-secondary/60 bg-secondary-shade-2"
         >
           {routing.locales.map((l) => (
             <Link

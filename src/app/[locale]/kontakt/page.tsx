@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageShell } from "@/components/PageShell";
 import { Ltr } from "@/components/Ltr";
+import { CopyButton } from "@/components/CopyButton";
 import { getSiteConfig } from "@/lib/config";
 
 /**
@@ -15,7 +16,9 @@ export default async function KontaktPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nav" });
   const tPage = await getTranslations({ locale, namespace: "kontaktPage" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
   const config = getSiteConfig();
+  const addressLine = `${config.org.address.street}, ${config.org.address.postalCode} ${config.org.address.city}`;
 
   return (
     <PageShell>
@@ -33,10 +36,15 @@ export default async function KontaktPage({ params }: { params: Promise<{ locale
             </dt>
             <dd className="mt-1 text-sm leading-[1.7] text-primary">
               <Ltr className="block">{config.org.legalName}</Ltr>
-              <Ltr className="block">{config.org.address.street}</Ltr>
-              <Ltr className="block">
-                {config.org.address.postalCode} {config.org.address.city}
-              </Ltr>
+              <div className="flex items-center gap-2">
+                <Ltr className="block">{addressLine}</Ltr>
+                <CopyButton
+                  value={addressLine}
+                  fieldLabel={tPage("addressHeading")}
+                  copyLabel={tCommon("copy")}
+                  copiedLabel={tCommon("copied")}
+                />
+              </div>
             </dd>
           </div>
           <div>
@@ -44,7 +52,15 @@ export default async function KontaktPage({ params }: { params: Promise<{ locale
               {tPage("phoneHeading")}
             </dt>
             <dd className="mt-1 text-sm text-primary">
-              <Ltr className="block">{config.org.phone}</Ltr>
+              <div className="flex items-center gap-2">
+                <Ltr className="block">{config.org.phone}</Ltr>
+                <CopyButton
+                  value={config.org.phone}
+                  fieldLabel={tPage("phoneHeading")}
+                  copyLabel={tCommon("copy")}
+                  copiedLabel={tCommon("copied")}
+                />
+              </div>
             </dd>
           </div>
           <div>
@@ -52,11 +68,19 @@ export default async function KontaktPage({ params }: { params: Promise<{ locale
               {tPage("emailHeading")}
             </dt>
             <dd className="mt-1 text-sm text-primary">
-              <Ltr className="block">
-                <a href={`mailto:${config.org.contactEmail}`} className="text-inherit">
-                  {config.org.contactEmail}
-                </a>
-              </Ltr>
+              <div className="flex items-center gap-2">
+                <Ltr className="block">
+                  <a href={`mailto:${config.org.contactEmail}`} className="text-inherit">
+                    {config.org.contactEmail}
+                  </a>
+                </Ltr>
+                <CopyButton
+                  value={config.org.contactEmail}
+                  fieldLabel={tPage("emailHeading")}
+                  copyLabel={tCommon("copy")}
+                  copiedLabel={tCommon("copied")}
+                />
+              </div>
             </dd>
           </div>
         </dl>
